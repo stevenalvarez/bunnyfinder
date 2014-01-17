@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    	<meta charset="utf-8"/>
+    	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+        
+        <title>Bunny Finder</title>
+        
+        <link rel="stylesheet" href="css/jquery.mobile-1.3.1.css" />
+        <link rel="stylesheet" href="css/reset.css" />
+    	<link rel="stylesheet" href="css/main.css" />
+        
+        <!-- include carousel.css -->
+        <link rel="stylesheet" href="css/carousel.min.css"/>
+        <link rel="stylesheet" href="css/carousel-style.css"/>
+            	
+        <script src="js/jquery-1.8.2.js"></script>
+        <script type="text/javascript">
+            $(document).bind("mobileinit", function () {
+                $.mobile.defaultPageTransition = 'none';
+            });
+        </script>
+		<script src="js/jquery.mobile-1.3.1.js"></script>
+        
+        <!-- include carousel.js -->
+        <script src="js/carousel.min.js"></script>
+		
+        <script src="cordova.js"></script>
+        <script src="PushNotification.js"></script>
+        
+        <!-- include googleapis-->
+        <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyBvLnXtnEnR1tea2mEXAYGhOXUgFEfm_Ig&sensor=true"></script>
+        
+        <script src="js/functions.js"></script>
+        <script src="js/app.functions.js"></script>
+        <script src="js/config.js"></script>
+        <script src="js/main.js"></script>
+		
+        <!-- cargamos al ultimo el script que inicializa los valores una vez cargado el dispositivo -->
+        <script type="text/javascript" src="js/app.ready.js"></script>
+        <script type="text/javascript">
+            app.initialize();
+        </script> 
+    </head>
+    <body>
+    
+    <!-- INDEX -->
+    
+    <div data-role="page" id="index" data-theme="a">
+    
+    	<div data-role="header" data-tap-toggle="false">
+    		<h1 class="logo">
+                <img src="img/logo.png"/>
+            </h1>
+    	</div><!-- /header -->
+    
+    	<div data-role="content">
+            <div class="content_options">
+                <a style="margin-left: 20px;" class="ui-btn-submit ui-btn-pink" href="home.html?id=1" data-role="button">IBIZA</a>
+                <a style="margin-left: 20px;" class="ui-btn-submit ui-btn-pink" href="home.html?id=2" data-role="button">MADRID</a>
+                <a class="ui-btn-submit ui-btn-pink" href="home.html?id=3" data-role="button">CERCA DE TI</a>
+            </div>
+    	</div><!-- /content -->
+    
+    	<div data-role="footer" data-tap-toggle="false" data-position="fixed">
+            <p>Cari&ntilde;o si&eacute;ntate, mientras ves a las chicas</p>
+    	</div><!-- /footer -->
+    
+    </div><!-- /page -->
+    
+    </body>
+</html>

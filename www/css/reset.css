@@ -1,0 +1,8 @@
+html, body				{ margin:0px; padding:0px; border:none; }
+h1, h2, h3				{ margin:0px; padding:0px; font-weight:normal; }
+h4, h5, h6				{ margin:0px; padding:0px; font-weight:normal; }
+p						{ margin:0px; padding:0px; }
+ul, ol, li					{ margin:0px; padding:0px; list-style:none; }
+img						{ border:none; }
+a						{ text-decoration:none; outline:none; }
+a:active, a:focus		{ outline:none;}
