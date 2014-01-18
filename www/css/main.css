@@ -35,6 +35,7 @@
 .left{float: left;}
 .right{float: right;}
 
+.ui-loader-verbose{box-shadow: 0 0 0; border-radius: 5px !important;}
 .ui-bar-a{border: none;background: #000;}
 .ui-content {padding: 0;clear: both;}
 .ui-page{background: #e9e9e9;}
@@ -135,7 +136,7 @@
 /* INDEX */
 #index.ui-page{background: url("../img/bg_wrapper.jpg") no-repeat scroll 0 0 transparent;}
 #index.ui-page{background-size: 100% auto;background-position: 0px 45px;}
-#index .ui-content{margin-top: 115px;}
+#index .ui-content{margin-top: 115px;display: none;}
 #index .texto {color: #000;text-shadow: 0 0 0;text-align: center;border-bottom: 1px solid #e3e3e3;font-size: 20px;padding: 15px 20px;letter-spacing: -1px;font-family:'caviar_dreamsregular';line-height: 23px;}
 #index .content_options{padding: 0px;width: 43%;float: right;margin-right: -4px;}
 #index .ui-footer p{font-family:'arizoniaregular';color: #e91393;font-size: 33px;letter-spacing: -1px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;text-align: center;margin: 2px 0px;}

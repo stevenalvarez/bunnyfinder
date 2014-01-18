@@ -27,6 +27,42 @@ $(document).bind('pageshow', function(event, ui) {
     
     //inicializamos la ubicacion
     getLocationGPS();
+    
+    //mostramos alert de mayor de edad
+    //0:por defecto,1:es aduto,2: no es adulto
+    if(page_id == "index"){
+        
+        var parent = $("#"+page_id);
+        if(isLogin()){
+            var user = COOKIE;
+            var adulto = user.adulto;
+            if(adulto != 0 && adulto == 1){
+                //si el tiene mayoria de edad mostramos el contenido
+                parent.find(".ui-content").fadeIn('slow');
+            }else if(adulto == 2){
+                parent.find(".ui-content").hide();
+            }
+        }else{
+            var interval = setInterval(function(){
+                if(isLogin()){
+                    $.mobile.loading( 'hide' );
+                    clearInterval(interval);
+                    
+                    var user = COOKIE;
+                    var adulto = user.adulto;
+                    if(adulto == 0){
+                        showAlertEdad(user.id, page_id);
+                    }else if(adulto == 1){
+                        //si el tiene mayoria de edad mostramos el contenido
+                        parent.find(".ui-content").fadeIn('slow');
+                    }
+                }else{
+                    showLoadingCustom('Espere por favor...');
+                }
+            },200);
+        }
+    }
+    
 });
 
 /************************************ EVENTOS *******************************************************/

@@ -125,3 +125,38 @@ function redirectToPage(seccion, id){
         //TODO
     }
 }
+
+function showAlertEdad(usuario_id, page_id){
+    navigator.notification.confirm(
+        "Pulsa Ok para confirmar que tienes al menos 18 a\u00F1os. Tu contenido espezar\u00E1 a descargarse inmediatamente.", // message
+        function(buttonIndex){
+            //1:aceptar,2:cancelar
+            if(buttonIndex == 1){
+                showLoadingCustom('Guardando datos...');
+                
+            	$.getJSON(BASE_URL_APP + 'usuarios/mobileSetAdulto/'+usuario_id+'/1', function(data) {
+                    
+                    if(data){
+                        //ocultamos loading
+                        $.mobile.loading( 'hide' );
+                        
+                        if(data.success){
+                            //re-escribimos la cookie con el nuevo valor
+                            reWriteCookie("user","adulto",data.valor);
+                            
+                            //si el tiene mayoria de edad mostramos el contenido
+                            var parent = $("#"+page_id);
+                            parent.find(".ui-content").fadeIn('slow');
+                        }else{
+                            showAlert(data.mensaje, "Error", "Aceptar");
+                        }
+                    }
+            	});
+            }else{
+                $.getJSON(BASE_URL_APP + 'usuarios/mobileSetAdulto/'+usuario_id+'/2', function(data) {});
+            }
+        },            // callback to invoke with index of button pressed
+    'Salir',           // title
+    'Ok,Cancelar'         // buttonLabels
+    );
+}

@@ -155,7 +155,7 @@ function showLoadingCustom(msg){
     $.mobile.loading( 'show', {
     	text: msg,
     	textVisible: true,
-    	theme: 'c',
+    	theme: 'a',
     	html: ""
     });
 }
