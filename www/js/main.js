@@ -92,6 +92,12 @@ $('#agencia_descripcion').live('pagebeforeshow', function(event, ui) {
     getAgenciaById(page_id, id);
 });
 
+//CERCA DE TI
+$('#cerca_de_ti').live('pagebeforeshow', function(event, ui) {
+    var page_id = $(this).attr("id");
+    getEscortsByDistance(page_id);
+});
+
 //GOOGLE MAP
 $('#google_map').live('pagebeforeshow', function(event, ui) {
     var page_id = $(this).attr("id");
@@ -312,6 +318,74 @@ function getEscortById(parent_id, escort_id){
             });
         }
 	});
+}
+
+//OBTENEMOS LOS ESCORTS POR DISTANCIA
+function getEscortsByDistance(parent_id){
+    var parent = $("#"+parent_id);
+    var container = parent.find("#carrousel_cerca_de_ti");
+    container.find('.m-item').remove();
+    container.find(".m-carousel-controls > a").remove();
+    
+    parent.find(".ui-content").hide();
+    
+    $.getJSON(BASE_URL_APP + 'escorts/mobileGetEscortsByDistance/'+LATITUDE+"/"+LONGITUDE, function(data) {
+        
+        if(data){
+            //mostramos loading
+            $.mobile.loading( 'show' );
+            
+    		items = data.items;
+            if(items.length){
+        		$.each(items, function(index, item) {
+                    
+               	    var imagen = item.Escort.imagen!=""?item.Escort.imagen:"default.png";
+               	    var mclass = ""; 
+               	    if(index == 0) mclass = "m-active";
+                    var html='<div class="m-item '+mclass+'">' +
+                        '<div class="container-top">' +
+                            '<img src="'+BASE_URL_APP+'img/escorts/thumbnails/' + imagen + '"/>' +
+                        '</div>' +
+                        '<div class="container-bottom">' +
+                            '<div class="left">' +
+                                '<h2>' +
+                                    '<a href="escort_descripcion.html?id='+item.Escort.id+'">'+item.Escort.title+'</a>' +
+                                '</h2>' +
+                            '</div>' +
+                            '<div class="right">' +
+                                '<p class="km">';
+                                //si esta menos de 1km le mostramos la distancia en metros en la cual se encuentra
+                                if(parseInt(item.Escort.kilomentros) < 1){
+                                    html+=parseFloat(item.Escort.metros).toFixed(2)+'M';
+                                }else{
+                                    html+=parseFloat(item.Escort.kilomentros).toFixed(2)+'KM';
+                                }                                
+                                html+='</p>' +
+                                '<p class="euro">'+item.Escort.precio+'<b>&euro;</b></p>' +
+                            '</div>' +
+                        '</div>' +
+                    '</div>';
+                    
+               	    container.find(".m-carousel-inner").append(html);
+                    container.find(".m-carousel-controls").append('<a href="#" data-slide="'+(index+1)+'">'+(index+1)+'</a>');
+        		});
+                
+                //iniciamos el carousel
+                container.find(".m-carousel-inner").promise().done(function() {
+                    //iniciamos el carrousel
+                    container.carousel();
+                    
+                    //ocultamos loading
+                    $.mobile.loading( 'hide' );
+                    parent.find(".ui-content").fadeIn("slow");
+                });
+            }else{
+                //ocultamos loading
+                $.mobile.loading( 'hide' );
+                parent.find(".ui-content").fadeIn("slow");
+            }
+        }
+	}); 
 }
 
 //OBTENEMOS LAS PROMOS

@@ -145,11 +145,11 @@
 #home .ui-content .ui-btn-submit{margin: 0;}
 #home .ui-btn-submit.ui-btn-pink .ui-btn-text{padding: 0.1em 0 0.1em 0;}
 
-/* ESCORTS - PROMOS - AGENCIAS */
-#escorts .m-carousel-controls, #promos .m-carousel-controls, #agencias .m-carousel-controls{bottom: 2px;}
-#escorts .m-carousel-bulleted a, #promos .m-carousel-bulleted a, #agencias .m-carousel-bulleted a{margin: 2px !important;padding: 6px !important;}
-#escorts .m-carousel-photos .carrousel_shadow, #promos .m-carousel-photos .carrousel_shadow, #agencias .m-carousel-photos .carrousel_shadow{top: -22px;}
-#promos .m-carousel-photos .m-item .container-bottom h2 a, #agencias .m-carousel-photos .m-item .container-bottom h2 a{font-size: 25px;}
+/* ESCORTS - PROMOS - AGENCIAS -  CERCA DE TI */
+#escorts .m-carousel-controls, #promos .m-carousel-controls, #agencias .m-carousel-controls, #cerca_de_ti .m-carousel-controls{bottom: 2px;}
+#escorts .m-carousel-bulleted a, #promos .m-carousel-bulleted a, #agencias .m-carousel-bulleted a, #cerca_de_ti .m-carousel-bulleted a{margin: 2px !important;padding: 6px !important;}
+#escorts .m-carousel-photos .carrousel_shadow, #promos .m-carousel-photos .carrousel_shadow, #agencias .m-carousel-photos .carrousel_shadow, #cerca_de_ti .m-carousel-photos .carrousel_shadow{top: -22px;}
+#promos .m-carousel-photos .m-item .container-bottom h2 a, #agencias .m-carousel-photos .m-item .container-bottom h2 a, #cerca_de_ti .m-carousel-photos .m-item .container-bottom h2 a{font-size: 25px;}
 #agencias .m-carousel-photos .m-item .container-bottom p.km{line-height: 38px;}
 
 /* ESCORT DESCRIPCION - AGENCIA DESCRIPCION - PROMO DESCRIPCION */
