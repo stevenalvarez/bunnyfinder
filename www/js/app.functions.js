@@ -156,7 +156,7 @@ function showAlertEdad(usuario_id, page_id){
                 $.getJSON(BASE_URL_APP + 'usuarios/mobileSetAdulto/'+usuario_id+'/2', function(data) {});
             }
         },            // callback to invoke with index of button pressed
-    'Salir',           // title
+    'Bunny Finder contiene material s\u00F3lo para adultos.',           // title
     'Ok,Cancelar'         // buttonLabels
     );
 }
