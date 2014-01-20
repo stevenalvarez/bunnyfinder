@@ -102,8 +102,13 @@ var app = {
         var pushNotification = window.plugins.pushNotification;
         
         if (event.alert) {
-            alert("2");
-            showNotification(event,'ios');
+            var interval_ios = setInterval(function(){
+                if(isLogin()){
+                    $.mobile.loading( 'hide' );
+                    clearInterval(interval_ios);
+                    showNotification(event,'ios');
+                }
+            },200);
         }
         if (event.badge) {
             pushNotification.setApplicationIconBadgeNumber(this.successHandler, this.errorHandler, event.badge);
