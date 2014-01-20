@@ -16,6 +16,7 @@ $(document).bind('pageinit', function(event){
 $(document).bind('pageshow', function(event, ui) {
     //verificamos si esta logeado sino lo esta logeamos automaticamente al usuario
     if(!isLogin()){
+        alert("aqui2");
         registerNewDevice();
     }
     

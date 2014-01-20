@@ -58,6 +58,7 @@ var app = {
             PUSH_NOTIFICATION_TOKEN = result;
             //mandamos a guardar el token para las notificaciones solo si no se guardo antes
             if(!REGISTER_PUSH_NOTIFICATION_TOKEN){
+                alert("aqui1");
                 registerNewDevice();
             }
         }
