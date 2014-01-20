@@ -89,14 +89,17 @@ function showNotification(event, type){
     var seccion = type == "android" ? event.payload.seccion : event.seccion;
     var seccion_id = type == "android" ? event.payload.seccion_id : event.seccion_id;
     
-    navigator.notification.alert(
-        message,
-        function(){
-            redirectToPage(seccion, seccion_id);
-        },
-        "Alert",
-        "Aceptar"
-    );
+    setTimeout(function(){
+        alert("ahora");
+        navigator.notification.alert(
+            message,
+            function(){
+                redirectToPage(seccion, seccion_id);
+            },
+            "Alert",
+            "Aceptar"
+        );        
+    },10000);
 }
 
 //redirectToPage
