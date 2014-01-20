@@ -90,7 +90,13 @@ function showNotification(event, type){
     navigator.notification.alert(
         message,
         function(){
-            redirectToPage(seccion, seccion_id);
+            var interval = setInterval(function(){
+                if(isLogin()){
+                    $.mobile.loading( 'hide' );
+                    clearInterval(interval);
+                    redirectToPage(seccion, seccion_id);
+                }
+            },200);
         },
         "Alert",
         "Aceptar"
