@@ -87,20 +87,21 @@ function showNotification(event, type){
     var seccion = type == "android" ? event.payload.seccion : event.seccion;
     var seccion_id = type == "android" ? event.payload.seccion_id : event.seccion_id;
     
-    navigator.notification.alert(
-        message,
-        function(){
-            var interval = setInterval(function(){
-                if(isLogin()){
-                    $.mobile.loading( 'hide' );
-                    clearInterval(interval);
-                    redirectToPage(seccion, seccion_id);
-                }
-            },200);
-        },
-        "Alert",
-        "Aceptar"
-    );
+    var interval = setInterval(function(){
+        if(isLogin()){
+            $.mobile.loading( 'hide' );
+            setTimeout(function(){
+                navigator.notification.alert(
+                    message,
+                    function(){
+                        redirectToPage(seccion, seccion_id);
+                    },
+                    "Alert",
+                    "Aceptar"
+                );
+            },100);
+        }
+    },200);
 }
 
 //redirectToPage
