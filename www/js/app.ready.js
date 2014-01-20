@@ -12,7 +12,8 @@ var CATEGORIA_ID = 1; //1:chicas,2:chicos,3:travestis,4:amas
 /* notificacion */
 var HAVE_NOTIFICATION = false;
 var TYPE_NOTIFICATION = '';
-var EVENT = '
+var EVENT = '';
+
 var app = {
     // Application Constructor
     initialize: function() {
