@@ -58,7 +58,6 @@ var app = {
             PUSH_NOTIFICATION_TOKEN = result;
             //mandamos a guardar el token para las notificaciones solo si no se guardo antes
             if(!REGISTER_PUSH_NOTIFICATION_TOKEN){
-                alert("1");
                 registerNewDevice();
             }
         }
@@ -102,13 +101,7 @@ var app = {
         var pushNotification = window.plugins.pushNotification;
         
         if (event.alert) {
-            var interval_ios = setInterval(function(){
-                if(isLogin()){
-                    $.mobile.loading( 'hide' );
-                    clearInterval(interval_ios);
-                    showNotification(event,'ios');
-                }
-            },200);
+            showNotification(event,'ios');
         }
         if (event.badge) {
             pushNotification.setApplicationIconBadgeNumber(this.successHandler, this.errorHandler, event.badge);
