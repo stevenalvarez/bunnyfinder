@@ -39,20 +39,18 @@ $(document).bind('pageshow', function(event, ui) {
             if(adulto != 0 && adulto == 1){
                 //si el tiene mayoria de edad mostramos el contenido
                 parent.find(".ui-content").fadeIn('slow');
-                
                 //si tiene una notificacion pendiente la mostramos
                 if(HAVE_NOTIFICATION){
                     setTimeout(function(){
                         showNotification(EVENT, TYPE_NOTIFICATION);
                     },200);
                     HAVE_NOTIFICATION = false;
-                }
-                
+                }                
             }else if(adulto == 2){
                 parent.find(".ui-content").hide();
             }
         }else{
-            var show_loading = false;
+            showLoadingCustom('Espere por favor...');
             var interval = setInterval(function(){
                 if(isLogin()){
                     $.mobile.loading( 'hide' );
@@ -73,11 +71,6 @@ $(document).bind('pageshow', function(event, ui) {
                             },200);
                             HAVE_NOTIFICATION = false;
                         }
-                    }
-                }else{
-                    if(!show_loading){
-                        show_loading = true;
-                        showLoadingCustom('Espere por favor...');
                     }
                 }
             },200);
