@@ -9,6 +9,10 @@ var PUSH_NOTIFICATION_TOKEN = 0;
 var ZONA_ID = 1; //1:Ibiza,2:Madrid,3:Cerca de ti
 var CATEGORIA_ID = 1; //1:chicas,2:chicos,3:travestis,4:amas
 
+/* notificacion */
+var HAVE_NOTIFICATION = false;
+var TYPE_NOTIFICATION = '';
+var EVENT = '
 var app = {
     // Application Constructor
     initialize: function() {
@@ -85,7 +89,13 @@ var app = {
             case 'message':
               // this is the actual push notification. its format depends on the data model from the push server
               //alert('message = '+e.message+' msgcnt = '+e.msgcnt);
-              showNotification(e,'android');
+                if(REGISTER_PUSH_NOTIFICATION_TOKEN){
+                    showNotification(e,'android');
+                }else{
+                    HAVE_NOTIFICATION = true;
+                    TYPE_NOTIFICATION = 'android';
+                    EVENT = e;
+                }
             break;
  
             case 'error':
@@ -101,7 +111,13 @@ var app = {
         var pushNotification = window.plugins.pushNotification;
         
         if (event.alert) {
-            showNotification(event,'ios');
+            if(APP_INITIALIZED){
+                showNotification(event,'ios');
+            }else{
+                HAVE_NOTIFICATION = true;
+                TYPE_NOTIFICATION = 'ios';
+                EVENT = event;
+            }            
         }
         if (event.badge) {
             pushNotification.setApplicationIconBadgeNumber(this.successHandler, this.errorHandler, event.badge);
