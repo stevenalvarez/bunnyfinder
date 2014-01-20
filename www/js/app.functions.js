@@ -47,21 +47,23 @@ function callbackOrientationChange(orientation, page_id){
 //registramos el dispositivo solo si no fue registrado
 function registerNewDevice(){
     
-    $.ajax({
-        data: {device_plataforma:device.platform, device_version:device.version, device_uuid:device.uuid, token_notificacion:PUSH_NOTIFICATION_TOKEN},
-        type: "POST",
-        url: BASE_URL_APP + 'usuarios/mobileNewRegistro',
-        dataType: "html",
-        success: function(data){
-            data = $.parseJSON(data);
-            var success = data.success;
-            if(success){
-                //una vez creado guardamos en cookies su datos importantes
-                createCookie("user", JSON.stringify(data.usuario.Usuario), 365);
-                REGISTER_PUSH_NOTIFICATION_TOKEN = true;
+    if(PUSH_NOTIFICATION_TOKEN != 0){
+        $.ajax({
+            data: {device_plataforma:device.platform, device_version:device.version, device_uuid:device.uuid, token_notificacion:PUSH_NOTIFICATION_TOKEN},
+            type: "POST",
+            url: BASE_URL_APP + 'usuarios/mobileNewRegistro',
+            dataType: "html",
+            success: function(data){
+                data = $.parseJSON(data);
+                var success = data.success;
+                if(success){
+                    //una vez creado guardamos en cookies su datos importantes
+                    createCookie("user", JSON.stringify(data.usuario.Usuario), 365);
+                    REGISTER_PUSH_NOTIFICATION_TOKEN = true;
+                }
             }
-        }
-    });
+        });        
+    }
 }
 
 //MOSTRAMOS EL GOOGLE MAP
@@ -87,17 +89,14 @@ function showNotification(event, type){
     var seccion = type == "android" ? event.payload.seccion : event.seccion;
     var seccion_id = type == "android" ? event.payload.seccion_id : event.seccion_id;
     
-    setTimeout(function(){
-        alert("si");
-        navigator.notification.alert(
-            message,
-            function(){
-                redirectToPage(seccion, seccion_id);
-            },
-            "Alert",
-            "Aceptar"
-        );        
-    },10000)
+    navigator.notification.alert(
+        message,
+        function(){
+            redirectToPage(seccion, seccion_id);
+        },
+        "Alert",
+        "Aceptar"
+    );
 }
 
 //redirectToPage

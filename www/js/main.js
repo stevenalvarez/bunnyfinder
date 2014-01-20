@@ -43,6 +43,7 @@ $(document).bind('pageshow', function(event, ui) {
                 parent.find(".ui-content").hide();
             }
         }else{
+            var show_loading = false;
             var interval = setInterval(function(){
                 if(isLogin()){
                     $.mobile.loading( 'hide' );
@@ -57,7 +58,10 @@ $(document).bind('pageshow', function(event, ui) {
                         parent.find(".ui-content").fadeIn('slow');
                     }
                 }else{
-                    showLoadingCustom('Espere por favor...');
+                    if(!show_loading){
+                        show_loading = true;
+                        showLoadingCustom('Espere por favor...');
+                    }
                 }
             },200);
         }
