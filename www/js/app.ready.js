@@ -112,13 +112,13 @@ var app = {
         var pushNotification = window.plugins.pushNotification;
         
         if (event.alert) {
-            if(APP_INITIALIZED){
+            if(REGISTER_PUSH_NOTIFICATION_TOKEN){
                 showNotification(event,'ios');
             }else{
                 HAVE_NOTIFICATION = true;
                 TYPE_NOTIFICATION = 'ios';
                 EVENT = event;
-            }            
+            }
         }
         if (event.badge) {
             pushNotification.setApplicationIconBadgeNumber(this.successHandler, this.errorHandler, event.badge);
