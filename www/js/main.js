@@ -64,7 +64,13 @@ $(document).bind('pageshow', function(event, ui) {
                         //si el tiene mayoria de edad mostramos el contenido
                         parent.find(".ui-content").fadeIn('slow');
                         
-
+                        //si tiene una notificacion pendiente la mostramos
+                        if(HAVE_NOTIFICATION){
+                            setTimeout(function(){
+                                showNotification(EVENT, TYPE_NOTIFICATION);
+                            },200);
+                            HAVE_NOTIFICATION = false;
+                        }
                     }
                 }
             },200);
