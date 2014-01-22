@@ -41,9 +41,7 @@ $(document).bind('pageshow', function(event, ui) {
                 parent.find(".ui-content").fadeIn('slow');
                 //si tiene una notificacion pendiente la mostramos
                 if(HAVE_NOTIFICATION){
-                    setTimeout(function(){
-                        showNotification(EVENT, TYPE_NOTIFICATION);
-                    },200);
+                    showNotification(EVENT, TYPE_NOTIFICATION);
                     HAVE_NOTIFICATION = false;
                 }                
             }else if(adulto == 2){
@@ -66,7 +64,6 @@ $(document).bind('pageshow', function(event, ui) {
                         
                         //si tiene una notificacion pendiente la mostramos
                         if(HAVE_NOTIFICATION){
-                            alert("si");
                             showNotification(EVENT, TYPE_NOTIFICATION);
                             HAVE_NOTIFICATION = false;
                         }
