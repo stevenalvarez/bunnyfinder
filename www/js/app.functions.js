@@ -108,7 +108,7 @@ function redirectToPage(seccion, id){
             page = "agencia_descripcion.html?id="+id;
         }        
     }else if(seccion == "escort"){
-        page = "escorts.html?id="+CATEGORIA_ID;
+        page = "home.html?id="+ZONA_ID;
         if(id != ""){
             page = "escort_descripcion.html?id="+id;
         }

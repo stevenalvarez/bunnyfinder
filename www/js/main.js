@@ -21,7 +21,7 @@ $(document).bind('pageshow', function(event, ui) {
     
     var page_id = event.target.id;
     var page = $("#" + $.mobile.activePage.attr('id'));
-    page.find(".ui-footer ul").find("a.nav_escorts").attr("href","escorts.html?id="+CATEGORIA_ID);
+    page.find(".ui-footer ul").find("a.nav_escorts").attr("href","home.html?id="+ZONA_ID);
     page.find(".ui-footer ul").find("a.nav_agencias").attr("href","agencias.html?id="+ZONA_ID);
     page.find(".ui-footer ul").find("a.nav_promos").attr("href","promos.html?id="+ZONA_ID);
     
