@@ -39,6 +39,7 @@ $(document).bind('pageshow', function(event, ui) {
             if(adulto != 0 && adulto == 1){
                 //si el tiene mayoria de edad mostramos el contenido
                 parent.find(".ui-content").fadeIn('slow');
+                
                 //si tiene una notificacion pendiente la mostramos
                 if(HAVE_NOTIFICATION){
                     showNotification(EVENT, TYPE_NOTIFICATION);
