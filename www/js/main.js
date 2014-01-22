@@ -758,7 +758,7 @@ function setSetting(parent_id){
             
             if(recibir_alertas == 1){
                 navigator.notification.confirm(
-                    "Estas seguro que quieres dejar de recibir alertas?", // message
+                    "Est\u00E1s seguro que quieres dejar de recibir alertas?", // message
                     function(buttonIndex){
                         //1:aceptar,2:cancelar
                         if(buttonIndex == 1){
