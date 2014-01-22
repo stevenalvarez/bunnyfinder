@@ -66,10 +66,11 @@ $(document).bind('pageshow', function(event, ui) {
                         
                         //si tiene una notificacion pendiente la mostramos
                         if(HAVE_NOTIFICATION){
-                            setTimeout(function(){
+                            alert("si");
+                            /*setTimeout(function(){
                                 showNotification(EVENT, TYPE_NOTIFICATION);
                             },200);
-                            HAVE_NOTIFICATION = false;
+                            HAVE_NOTIFICATION = false;*/
                         }
                     }
                 }
