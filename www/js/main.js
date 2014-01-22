@@ -67,10 +67,8 @@ $(document).bind('pageshow', function(event, ui) {
                         //si tiene una notificacion pendiente la mostramos
                         if(HAVE_NOTIFICATION){
                             alert("si");
-                            /*setTimeout(function(){
-                                showNotification(EVENT, TYPE_NOTIFICATION);
-                            },200);
-                            HAVE_NOTIFICATION = false;*/
+                            showNotification(EVENT, TYPE_NOTIFICATION);
+                            HAVE_NOTIFICATION = false;
                         }
                     }
                 }
