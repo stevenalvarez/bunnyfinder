@@ -55,6 +55,7 @@ function callbackOrientationChange(orientation, page_id){
 function registerNewDevice(){
     
     if(PUSH_NOTIFICATION_TOKEN != 0){
+        alert("asdfasdfasdf");
         $.ajax({
             data: {device_plataforma:device.platform, device_version:device.version, device_uuid:device.uuid, token_notificacion:PUSH_NOTIFICATION_TOKEN},
             type: "POST",
@@ -68,6 +69,8 @@ function registerNewDevice(){
                     createCookie("user", JSON.stringify(data.usuario.Usuario), 365);
                     REGISTER_PUSH_NOTIFICATION_TOKEN = true;
                     alert(REGISTER_PUSH_NOTIFICATION_TOKEN);
+                }else{
+                    alert(JSON.stringify(data));
                 }
             }
         });        
