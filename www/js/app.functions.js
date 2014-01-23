@@ -54,6 +54,8 @@ function callbackOrientationChange(orientation, page_id){
 //registramos el dispositivo solo si no fue registrado
 function registerNewDevice(){
     
+    alert("esta haciendo el login");
+    alert(PUSH_NOTIFICATION_TOKEN);
     if(PUSH_NOTIFICATION_TOKEN != 0){
         alert("asdfasdfasdf");
         $.ajax({
