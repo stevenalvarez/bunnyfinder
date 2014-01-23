@@ -46,7 +46,7 @@ function callbackOrientationChange(orientation, page_id){
         if(orientation == "landscape"){
             parent.find(".ui-footer p").css("width","100%");
         }else if(orientation == "portrait"){
-            parent.find(".ui-footer p").css("width","165%");
+            parent.find(".ui-footer p").css("width","175%");
         }
     }
 }
@@ -177,7 +177,7 @@ function showAlertEdad(usuario_id, page_id){
 
 function parrafo(element){
     element.css("left","0px");
-    element.animate({ "left" : "-200px"}, 6000, function(){
+    element.animate({ "left" : "-210px"}, 6000, function(){
         parrafo(element);
     });
 }
