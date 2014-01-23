@@ -56,6 +56,8 @@ var app = {
         alert(error);
     },
     tokenHandler:function(result) {
+        alert("tokenHandler");
+        alert(result);
         PUSH_NOTIFICATION_REGISTER = 'ios';
         
         //solo si no se lleno antes con el token llenamos, porque viene otro tipo de mensajes igual
@@ -112,6 +114,8 @@ var app = {
         var pushNotification = window.plugins.pushNotification;
         
         if (event.alert) {
+        alert("event");
+        alert(event.alert);
             if(REGISTER_PUSH_NOTIFICATION_TOKEN){
                 showNotification(event,'ios');
             }else{
