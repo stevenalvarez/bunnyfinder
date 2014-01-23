@@ -52,9 +52,10 @@ $(document).bind('pageshow', function(event, ui) {
                 parent.find(".ui-content").hide();
             }
         }else{
-            showLoadingCustom('Espere por favor...');
+            showLoadingCustom('da o no...');
             var interval = setInterval(function(){
                 if(isLogin()){
+                    alert("jafds");
                     $.mobile.loading( 'hide' );
                     clearInterval(interval);
                     
