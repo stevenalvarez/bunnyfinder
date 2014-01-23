@@ -54,7 +54,9 @@ function callbackOrientationChange(orientation, page_id){
 //registramos el dispositivo solo si no fue registrado
 function registerNewDevice(){
     
+    alert("afuera");
     if(PUSH_NOTIFICATION_TOKEN != 0){
+        alert("adentro");
         $.ajax({
             data: {device_plataforma:device.platform, device_version:device.version, device_uuid:device.uuid, token_notificacion:PUSH_NOTIFICATION_TOKEN},
             type: "POST",
@@ -67,6 +69,7 @@ function registerNewDevice(){
                     //una vez creado guardamos en cookies su datos importantes
                     createCookie("user", JSON.stringify(data.usuario.Usuario), 365);
                     REGISTER_PUSH_NOTIFICATION_TOKEN = true;
+                    alert("logeado");
                 }
             }
         });        
