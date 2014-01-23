@@ -43,7 +43,7 @@ var app = {
             pushNotification.register(this.successHandler, this.errorHandler,{"senderID":"629734064389","ecb":"app.onNotificationGCM"});
         }
         else {
-            alert("Register called ios");
+            //alert("Register called ios");
             pushNotification.register(this.tokenHandler,this.errorHandler,{"badge":"true","sound":"true","alert":"true","ecb":"app.onNotificationAPN"});
         }
     },
@@ -53,7 +53,7 @@ var app = {
         //alert('Callback Success! Result = '+result);
     },
     errorHandler:function(error) {
-        alert("mierda..." + error);
+        alert(error);
     },
     tokenHandler:function(result) {
         PUSH_NOTIFICATION_REGISTER = 'ios';
