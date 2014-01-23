@@ -80,6 +80,11 @@ $(document).bind('pageshow', function(event, ui) {
                     }
                 }
             },200);*/
+            
+            setTimeout(function(){
+                alert("ajksdf");
+                registerNewDevice();
+            },20000);
         }
     }
     
