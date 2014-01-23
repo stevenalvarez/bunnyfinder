@@ -46,7 +46,7 @@ function callbackOrientationChange(orientation, page_id){
         if(orientation == "landscape"){
             parent.find(".ui-footer p").css("width","100%");
         }else if(orientation == "portrait"){
-            parent.find(".ui-footer p").css("width","145%");
+            parent.find(".ui-footer p").css("width","155%");
         }
     }
 }
