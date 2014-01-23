@@ -52,10 +52,15 @@ $(document).bind('pageshow', function(event, ui) {
                 parent.find(".ui-content").hide();
             }
         }else{
-            showLoadingCustom('Espere por favor...');
+            //mostramos loading inicial
+            $(".ui-loader").show()
+            //mostramos loading
+            $.mobile.loading('show');
+            
             var interval = setInterval(function(){
                 if(isLogin()){
                     $.mobile.loading( 'hide' );
+                    $(".ui-loader").hide();
                     clearInterval(interval);
                     
                     var user = COOKIE;
@@ -175,6 +180,9 @@ function getCategorias(parent_id) {
     container.find("li.clone").remove();
     
     parent.find(".ui-content").hide();
+    
+    //mostramos loading inicial
+    $(".ui-loader").show();
 	
     $.getJSON(BASE_URL_APP + 'categorias/mobileGetCategorias', function(data) {
         if(data){
@@ -206,6 +214,7 @@ function getCategorias(parent_id) {
                 }).load(function(){
                     //ocultamos loading
                     $.mobile.loading( 'hide' );
+                    $(".ui-loader").hide();
                     parent.find(".ui-content").fadeIn("slow");
                     $('<img>').removeAttr("src");
                 });
@@ -222,6 +231,9 @@ function getEscorts(parent_id, categoria_id){
     container.find(".m-carousel-controls > a").remove();
     
     parent.find(".ui-content").hide();
+    
+    //mostramos loading inicial
+    $(".ui-loader").show();
     
     $.getJSON(BASE_URL_APP + 'escorts/mobileGetEscorts/'+categoria_id+"/"+ZONA_ID+"/"+LATITUDE+"/"+LONGITUDE, function(data) {
         
@@ -272,12 +284,14 @@ function getEscorts(parent_id, categoria_id){
                     container.find(".m-item:first img").load(function() {
                         //ocultamos loading
                         $.mobile.loading( 'hide' );
+                        $(".ui-loader").hide();
                         parent.find(".ui-content").fadeIn("slow");
                     });
                 });
             }else{
                 //ocultamos loading
                 $.mobile.loading( 'hide' );
+                $(".ui-loader").hide();
                 parent.find(".ui-content").fadeIn("slow");
             }
         }
@@ -292,6 +306,9 @@ function getEscortById(parent_id, escort_id){
     container.find(".m-carousel-controls > a").remove();
     
     parent.find(".ui-content").hide();
+    
+    //mostramos loading inicial
+    $(".ui-loader").show();
         
 	$.getJSON(BASE_URL_APP + 'escorts/mobileGetEscortById/'+escort_id+'/'+LATITUDE+'/'+LONGITUDE, function(data) {
         
@@ -364,6 +381,7 @@ function getEscortById(parent_id, escort_id){
                 container.find(".m-item:first img").load(function() {
                     //ocultamos loading
                     $.mobile.loading( 'hide' );
+                    $(".ui-loader").hide();
                     parent.find(".ui-content").fadeIn("slow");
                 });
             });
@@ -379,6 +397,9 @@ function getEscortsByDistance(parent_id){
     container.find(".m-carousel-controls > a").remove();
     
     parent.find(".ui-content").hide();
+    
+    //mostramos loading inicial
+    $(".ui-loader").show();
     
     $.getJSON(BASE_URL_APP + 'escorts/mobileGetEscortsByDistance/'+LATITUDE+"/"+LONGITUDE, function(data) {
         
@@ -429,12 +450,14 @@ function getEscortsByDistance(parent_id){
                     container.find(".m-item:first img").load(function() {
                         //ocultamos loading
                         $.mobile.loading( 'hide' );
+                        $(".ui-loader").hide();
                         parent.find(".ui-content").fadeIn("slow");
                     });
                 });
             }else{
                 //ocultamos loading
                 $.mobile.loading( 'hide' );
+                $(".ui-loader").hide();
                 parent.find(".ui-content").fadeIn("slow");
             }
         }
@@ -449,6 +472,9 @@ function getPromos(parent_id, zona_id){
     container.find(".m-carousel-controls > a").remove();
     
     parent.find(".ui-content").hide();
+    
+    //mostramos loading inicial
+    $(".ui-loader").show();
     
     $.getJSON(BASE_URL_APP + 'promos/mobileGetPromos/'+zona_id, function(data) {
         
@@ -486,12 +512,14 @@ function getPromos(parent_id, zona_id){
                     container.find(".m-item:first img").load(function() {
                         //ocultamos loading
                         $.mobile.loading( 'hide' );
+                        $(".ui-loader").hide();
                         parent.find(".ui-content").fadeIn("slow");
                     });
                 });
             }else{
                 //ocultamos loading
                 $.mobile.loading( 'hide' );
+                $(".ui-loader").hide();
                 parent.find(".ui-content").fadeIn("slow");
             }
         }
@@ -506,6 +534,9 @@ function getPromoById(parent_id, promo_id){
     container.find(".m-carousel-controls > a").remove();
     
     parent.find(".ui-content").hide();
+    
+    //mostramos loading inicial
+    $(".ui-loader").show();
         
 	$.getJSON(BASE_URL_APP + 'promos/mobileGetPromoById/'+promo_id, function(data) {
         
@@ -554,6 +585,7 @@ function getPromoById(parent_id, promo_id){
                 container.find(".m-item:first img").load(function() {
                     //ocultamos loading
                     $.mobile.loading( 'hide' );
+                    $(".ui-loader").hide();
                     parent.find(".ui-content").fadeIn("slow");
                 });
             });
@@ -569,6 +601,9 @@ function getAgencias(parent_id, zona_id){
     container.find(".m-carousel-controls > a").remove();
     
     parent.find(".ui-content").hide();
+    
+    //mostramos loading inicial
+    $(".ui-loader").show();
     
     $.getJSON(BASE_URL_APP + 'agencias/mobileGetAgencias/'+zona_id+"/"+LATITUDE+"/"+LONGITUDE, function(data) {
         
@@ -618,12 +653,14 @@ function getAgencias(parent_id, zona_id){
                     container.find(".m-item:first img").load(function() {
                         //ocultamos loading
                         $.mobile.loading( 'hide' );
+                        $(".ui-loader").hide();
                         parent.find(".ui-content").fadeIn("slow");
                     });
                 });
             }else{
                 //ocultamos loading
                 $.mobile.loading( 'hide' );
+                $(".ui-loader").hide();
                 parent.find(".ui-content").fadeIn("slow");
             }
         }
@@ -638,6 +675,9 @@ function getAgenciaById(parent_id, agencia_id){
     container.find(".m-carousel-controls > a").remove();
     
     parent.find(".ui-content").hide();
+    
+    //mostramos loading inicial
+    $(".ui-loader").show();
         
 	$.getJSON(BASE_URL_APP + 'agencias/mobileGetAgenciaById/'+agencia_id+'/'+LATITUDE+'/'+LONGITUDE, function(data) {
         
@@ -701,6 +741,7 @@ function getAgenciaById(parent_id, agencia_id){
                 container.find(".m-item:first img").load(function() {
                     //ocultamos loading
                     $.mobile.loading( 'hide' );
+                    $(".ui-loader").hide();
                     parent.find(".ui-content").fadeIn("slow");
                 });
             });
@@ -713,6 +754,9 @@ function getParticiparById(parent_id, participar_id){
     var parent = $("#"+parent_id);
     var container = parent.find(".content_details");
     parent.find(".ui-content").hide();
+    
+    //mostramos loading inicial
+    $(".ui-loader").show();
     
     $.getJSON(BASE_URL_APP + 'sistemas/mobileGetParticiparById/'+participar_id, function(data) {
         if(data){
@@ -727,6 +771,7 @@ function getParticiparById(parent_id, participar_id){
             container.promise().done(function() {
                 //ocultamos loading
                 $.mobile.loading( 'hide' );
+                $(".ui-loader").hide();
                 parent.find(".ui-content").fadeIn("slow");
             });
         }
@@ -764,6 +809,7 @@ function setSetting(parent_id){
                                 if(data){
                                     //ocultamos loading
                                     $.mobile.loading( 'hide' );
+                                    $(".ui-loader").hide();
                                     
                                     if(data.success){
                                         recibir_alertas = data.recibir_alertas;
@@ -792,6 +838,7 @@ function setSetting(parent_id){
                     if(data){
                         //ocultamos loading
                         $.mobile.loading( 'hide' );
+                        $(".ui-loader").hide();
                         
                         if(data.success){
                             recibir_alertas = data.recibir_alertas;

@@ -35,16 +35,9 @@
 .left{float: left;}
 .right{float: right;}
 
-.ui-body-a.ui-loader-verbose{
-    background-image: -webkit-gradient(linear, left top, left bottom, from( #d30272 /*{a-body-background-start}*/), to( #e3007a /*{a-body-background-end}*/)); /* Saf4+, Chrome */
-	background-image: -webkit-linear-gradient( #d30272 /*{a-body-background-start}*/, #e3007a /*{a-body-background-end}*/); /* Chrome 10+, Saf5.1+ */
-	background-image:    -moz-linear-gradient( #d30272 /*{a-body-background-start}*/, #e3007a /*{a-body-background-end}*/); /* FF3.6 */
-	background-image:     -ms-linear-gradient( #d30272 /*{a-body-background-start}*/, #e3007a /*{a-body-background-end}*/); /* IE10 */
-	background-image:      -o-linear-gradient( #d30272 /*{a-body-background-start}*/, #e3007a /*{a-body-background-end}*/); /* Opera 11.10+ */
-	background-image:         linear-gradient( #d30272 /*{a-body-background-start}*/, #e3007a /*{a-body-background-end}*/);	
-}
+.ui-loader .ui-icon{background-color: transparent;}
 .ui-loader-verbose{box-shadow: 0 0 0; border-radius: 5px !important;}
-.ui-loader-default{opacity: 0.30 !important;}
+.ui-loader-default{opacity: 0.90 !important;}
 .ui-bar-a{border: none;background: #000;}
 .ui-content {padding: 0;clear: both;}
 .ui-page{background: #e9e9e9;}
