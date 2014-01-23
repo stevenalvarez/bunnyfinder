@@ -199,9 +199,16 @@ function getCategorias(parent_id) {
     		});
             
             container.promise().done(function() {
-                //ocultamos loading
-                $.mobile.loading( 'hide' );
-                parent.find(".ui-content").fadeIn("slow");
+                $('<img>').attr('src',function(){
+                    var imgUrl = container.find("li:last").css('background-image');
+                    imgUrl = imgUrl .substring(4, imgUrl .length-1);
+                    return imgUrl;
+                }).load(function(){
+                    //ocultamos loading
+                    $.mobile.loading( 'hide' );
+                    parent.find(".ui-content").fadeIn("slow");
+                    $('<img>').removeAttr("src");
+                });
             });
         }
 	});
@@ -262,9 +269,11 @@ function getEscorts(parent_id, categoria_id){
                     //iniciamos el carrousel
                     container.carousel();
                     
-                    //ocultamos loading
-                    $.mobile.loading( 'hide' );
-                    parent.find(".ui-content").fadeIn("slow");
+                    container.find(".m-item:first img").load(function() {
+                        //ocultamos loading
+                        $.mobile.loading( 'hide' );
+                        parent.find(".ui-content").fadeIn("slow");
+                    });
                 });
             }else{
                 //ocultamos loading
@@ -352,9 +361,11 @@ function getEscortById(parent_id, escort_id){
                 //iniciamos el carrousel
                 container.carousel();
                 
-                //ocultamos loading
-                $.mobile.loading( 'hide' );
-                parent.find(".ui-content").fadeIn("slow");
+                container.find(".m-item:first img").load(function() {
+                    //ocultamos loading
+                    $.mobile.loading( 'hide' );
+                    parent.find(".ui-content").fadeIn("slow");
+                });
             });
         }
 	});
@@ -415,9 +426,11 @@ function getEscortsByDistance(parent_id){
                     //iniciamos el carrousel
                     container.carousel();
                     
-                    //ocultamos loading
-                    $.mobile.loading( 'hide' );
-                    parent.find(".ui-content").fadeIn("slow");
+                    container.find(".m-item:first img").load(function() {
+                        //ocultamos loading
+                        $.mobile.loading( 'hide' );
+                        parent.find(".ui-content").fadeIn("slow");
+                    });
                 });
             }else{
                 //ocultamos loading
@@ -470,9 +483,11 @@ function getPromos(parent_id, zona_id){
                     //iniciamos el carrousel
                     container.carousel();
                     
-                    //ocultamos loading
-                    $.mobile.loading( 'hide' );
-                    parent.find(".ui-content").fadeIn("slow");
+                    container.find(".m-item:first img").load(function() {
+                        //ocultamos loading
+                        $.mobile.loading( 'hide' );
+                        parent.find(".ui-content").fadeIn("slow");
+                    });
                 });
             }else{
                 //ocultamos loading
@@ -536,9 +551,11 @@ function getPromoById(parent_id, promo_id){
                 //iniciamos el carrousel
                 container.carousel();
                 
-                //ocultamos loading
-                $.mobile.loading( 'hide' );
-                parent.find(".ui-content").fadeIn("slow");
+                container.find(".m-item:first img").load(function() {
+                    //ocultamos loading
+                    $.mobile.loading( 'hide' );
+                    parent.find(".ui-content").fadeIn("slow");
+                });
             });
         }
 	});
@@ -598,9 +615,11 @@ function getAgencias(parent_id, zona_id){
                     //iniciamos el carrousel
                     container.carousel();
                     
-                    //ocultamos loading
-                    $.mobile.loading( 'hide' );
-                    parent.find(".ui-content").fadeIn("slow");
+                    container.find(".m-item:first img").load(function() {
+                        //ocultamos loading
+                        $.mobile.loading( 'hide' );
+                        parent.find(".ui-content").fadeIn("slow");
+                    });
                 });
             }else{
                 //ocultamos loading
@@ -679,9 +698,11 @@ function getAgenciaById(parent_id, agencia_id){
                 //iniciamos el carrousel
                 container.carousel();
                 
-                //ocultamos loading
-                $.mobile.loading( 'hide' );
-                parent.find(".ui-content").fadeIn("slow");
+                container.find(".m-item:first img").load(function() {
+                    //ocultamos loading
+                    $.mobile.loading( 'hide' );
+                    parent.find(".ui-content").fadeIn("slow");
+                });
             });
         }
 	});
