@@ -44,9 +44,9 @@ function callbackOrientationChange(orientation, page_id){
     if(page_id == "index"){
         var parent = $("#"+page_id);
         if(orientation == "landscape"){
-            parent.find(".ui-footer p").css("width","100%");
+            parent.find(".ui-footer p").css("width","120%");
         }else if(orientation == "portrait"){
-            parent.find(".ui-footer p").css("width","175%");
+            parent.find(".ui-footer p").css("width","180%");
         }
     }
 }
@@ -177,7 +177,7 @@ function showAlertEdad(usuario_id, page_id){
 
 function parrafo(element){
     element.css("left","0px");
-    element.animate({ "left" : "-210px"}, 6000, function(){
+    element.animate({ "left" : "-230px"}, 6000, function(){
         parrafo(element);
     });
 }
