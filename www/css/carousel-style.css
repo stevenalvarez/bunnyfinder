@@ -198,60 +198,60 @@
     margin: 0 -10px;
     padding: 0 10px;
 }
-.m-carousel-photos .m-item .ui-navbar li.ui-block-a,
-.m-carousel-photos .m-item .ui-navbar li.ui-block-c{
+.m-carousel-photos .ui-navbar li.ui-block-a,
+.m-carousel-photos .ui-navbar li.ui-block-c{
     width: 20%;
 }
-.m-carousel-photos .m-item .ui-navbar li.ui-block-a .ui-btn-inner,
-.m-carousel-photos .m-item .ui-navbar li.ui-block-c .ui-btn-inner{
+.m-carousel-photos .ui-navbar li.ui-block-a .ui-btn-inner,
+.m-carousel-photos .ui-navbar li.ui-block-c .ui-btn-inner{
     padding-top: 0.3em;
     padding-bottom: .0em;
 }
-.m-carousel-photos .m-item .ui-navbar li.ui-block-a .ui-btn-inner{
+.m-carousel-photos .ui-navbar li.ui-block-a .ui-btn-inner{
     padding-left: 10px;
     padding-right: 0;
     border: none;
     height: 54px;
     width: 54px;
-}.m-carousel-photos .m-carousel-inner .ui-navbar{
+}.m-carousel-photos .ui-navbar{
     position: absolute;
-    width: 100%;
+    width: 94%;
     top: 38%;
 }
-.m-carousel-photos .m-item .ui-navbar li.ui-block-c .ui-btn-inner{
+.m-carousel-photos .ui-navbar li.ui-block-c .ui-btn-inner{
     padding-right: 4px;
     padding-left: 0;
     border: none;
 }
-.m-carousel-photos .m-item .ui-navbar li.ui-block-a .ui-btn-text,
-.m-carousel-photos .m-item .ui-navbar li.ui-block-c .ui-btn-text{
+.m-carousel-photos .ui-navbar li.ui-block-a .ui-btn-text,
+.m-carousel-photos .ui-navbar li.ui-block-c .ui-btn-text{
     text-indent: -999px;
     display: inline-block;
     height: 20px;
     width: 20px;
 }
-.m-carousel-photos .m-item .ui-navbar li.ui-block-a .ui-btn-text{
+.m-carousel-photos .ui-navbar li.ui-block-a .ui-btn-text{
     background: url("../img/previous_carrousel_sprite.png") no-repeat scroll top center transparent;
     background-position: 0% 0%;
     background-size: 54px;
     height: 54px;
     width: 54px;
 }
-.m-carousel-photos .m-item .ui-navbar li.ui-block-a .ui-btn-hover-a .ui-btn-inner .ui-btn-text,
-.m-carousel-photos .m-item .ui-navbar li.ui-block-c .ui-btn-hover-a .ui-btn-inner .ui-btn-text{
+.m-carousel-photos .ui-navbar li.ui-block-a .ui-btn-hover-a .ui-btn-inner .ui-btn-text,
+.m-carousel-photos .ui-navbar li.ui-block-c .ui-btn-hover-a .ui-btn-inner .ui-btn-text{
     background-position: 0% 100% !important;
 }
-.m-carousel-photos .m-item .ui-navbar li.ui-block-c .ui-btn-text{
+.m-carousel-photos .ui-navbar li.ui-block-c .ui-btn-text{
     background: url("../img/next_carrousel_sprite.png") no-repeat scroll top center transparent;
     background-position: 0% 0%;
     background-size: 54px;
     height: 54px;
     width: 54px;
 }
-.m-carousel-photos .m-item .ui-navbar li.ui-block-b{
+.m-carousel-photos .ui-navbar li.ui-block-b{
     width: 60%;
 }
-.m-carousel-photos .m-item .ui-navbar li a{
+.m-carousel-photos .ui-navbar li a{
     background: transparent;
     border: none;
 }
@@ -378,7 +378,10 @@ and (orientation:landscape)
     .m-carousel-photos .m-item > img{
         max-height: 598px;
         min-height: 598px;
-    }     
+    }
+    .m-carousel-photos .ui-navbar{
+        width: 99%;
+    }
 }
 
 /* LANDSCAPE */

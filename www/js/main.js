@@ -299,17 +299,6 @@ function getEscortById(parent_id, escort_id){
            	    var mclass = ""; 
            	    if(index == 0) mclass = "m-active";
                 var html='<div class="m-item '+mclass+'">' +
-                    '<div data-role="navbar" data-corners="false" class="ui-navbar ui-mini" role="navigation">' +
-                        '<ul class="ui-grid-b">' +
-                            '<li class="ui-block-a">' +
-                                '<a href="#" data-slide="prev" data-corners="false" data-shadow="false" data-iconshadow="true" data-wrapperels="span" data-theme="a" data-inline="true" class="ui-btn ui-btn-inline ui-btn-up-a"><span class="ui-btn-inner"><span class="ui-btn-text">previous</span></span></a>' +
-                            '</li>' +
-                            '<li class="ui-block-b">&nbsp;</li>' +
-                            '<li class="ui-block-c">' +
-                                '<a href="#" data-slide="next" data-corners="false" data-shadow="false" data-iconshadow="true" data-wrapperels="span" data-theme="a" data-inline="true" class="ui-btn ui-btn-up-a ui-btn-inline"><span class="ui-btn-inner"><span class="ui-btn-text">next</span></span></a>' +
-                            '</li>' +
-                        '</ul>' +
-                    '</div>' +
                     '<img src="'+BASE_URL_APP+'img/escorts/' + imagen + '">' +
                 '</div>';
                 
@@ -517,17 +506,6 @@ function getPromoById(parent_id, promo_id){
            	    var mclass = ""; 
            	    if(index == 0) mclass = "m-active";
                 var html='<div class="m-item '+mclass+'">' +
-                    '<div data-role="navbar" data-corners="false" class="ui-navbar ui-mini" role="navigation">' +
-                        '<ul class="ui-grid-b">' +
-                            '<li class="ui-block-a">' +
-                                '<a href="#" data-slide="prev" data-corners="false" data-shadow="false" data-iconshadow="true" data-wrapperels="span" data-theme="a" data-inline="true" class="ui-btn ui-btn-inline ui-btn-up-a"><span class="ui-btn-inner"><span class="ui-btn-text">previous</span></span></a>' +
-                            '</li>' +
-                            '<li class="ui-block-b">&nbsp;</li>' +
-                            '<li class="ui-block-c">' +
-                                '<a href="#" data-slide="next" data-corners="false" data-shadow="false" data-iconshadow="true" data-wrapperels="span" data-theme="a" data-inline="true" class="ui-btn ui-btn-up-a ui-btn-inline"><span class="ui-btn-inner"><span class="ui-btn-text">next</span></span></a>' +
-                            '</li>' +
-                        '</ul>' +
-                    '</div>' +
                     '<img src="'+BASE_URL_APP+'img/promos/' + imagen + '">' +
                 '</div>';
                 
@@ -656,17 +634,6 @@ function getAgenciaById(parent_id, agencia_id){
            	    var mclass = ""; 
            	    if(index == 0) mclass = "m-active";
                 var html='<div class="m-item '+mclass+'">' +
-                    '<div data-role="navbar" data-corners="false" class="ui-navbar ui-mini" role="navigation">' +
-                        '<ul class="ui-grid-b">' +
-                            '<li class="ui-block-a">' +
-                                '<a href="#" data-slide="prev" data-corners="false" data-shadow="false" data-iconshadow="true" data-wrapperels="span" data-theme="a" data-inline="true" class="ui-btn ui-btn-inline ui-btn-up-a"><span class="ui-btn-inner"><span class="ui-btn-text">previous</span></span></a>' +
-                            '</li>' +
-                            '<li class="ui-block-b">&nbsp;</li>' +
-                            '<li class="ui-block-c">' +
-                                '<a href="#" data-slide="next" data-corners="false" data-shadow="false" data-iconshadow="true" data-wrapperels="span" data-theme="a" data-inline="true" class="ui-btn ui-btn-up-a ui-btn-inline"><span class="ui-btn-inner"><span class="ui-btn-text">next</span></span></a>' +
-                            '</li>' +
-                        '</ul>' +
-                    '</div>' +
                     '<img src="'+BASE_URL_APP+'img/agencias/' + imagen + '">' +
                 '</div>';
                 
