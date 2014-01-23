@@ -52,6 +52,7 @@ $(document).bind('pageshow', function(event, ui) {
                 parent.find(".ui-content").hide();
             }
         }else{
+            /*
             //mostramos loading inicial
             $(".ui-loader").show()
             //mostramos loading
@@ -78,7 +79,7 @@ $(document).bind('pageshow', function(event, ui) {
                         }
                     }
                 }
-            },200);
+            },200);*/
         }
     }
     

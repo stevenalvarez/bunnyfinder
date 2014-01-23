@@ -67,6 +67,7 @@ function registerNewDevice(){
                     //una vez creado guardamos en cookies su datos importantes
                     createCookie("user", JSON.stringify(data.usuario.Usuario), 365);
                     REGISTER_PUSH_NOTIFICATION_TOKEN = true;
+                    alert(REGISTER_PUSH_NOTIFICATION_TOKEN);
                 }
             }
         });        
