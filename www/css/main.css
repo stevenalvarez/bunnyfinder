@@ -119,7 +119,7 @@
 .nav-enlaces .icon_mapa .ui-icon{background: url("../img/icon_mapa_black.png") no-repeat scroll 0 0 transparent;height: 30px;width: 34px;background-size: 34px;margin-left: -17px;margin-top: 5px;}
 .nav-enlaces .icon_web .ui-icon{background: url("../img/icon_web_black.png") no-repeat scroll 0 0 transparent;height: 35px;width: 30px;background-size: 29px;margin-left: -13px;margin-top: 1px;}
 .nav-enlaces .icon_promo .ui-icon{background: url("../img/icon_promo_black.png") no-repeat scroll 0 0 transparent;height: 34px;width: 32px;background-size: 32px;margin-left: -17px;margin-top: 3px;}
-.nav-enlaces .icon_promo .numero{position: relative;top: -34px;color: #fff;margin-left: -16px;height: 18px;text-align: center;background: url("../img/bg_item.png") no-repeat scroll center top transparent;background-size: 15px 18px;width: 17px;display: inline-block;padding-top: 1px;}
+.nav-enlaces .icon_promo .numero{position: relative;top: -34px;color: #fff;margin-left: -16px;height: 18px;text-align: center;background: url("../img/bg_item.png") no-repeat scroll center top transparent;background-size: 15px 18px;width: 17px;display: inline-block;}
 
 /* CARROUSEL*/
 .m-carousel-photos .m-item .container-top{border: 7px solid #000; border-bottom: 0px; display: block;margin: 1px 1px 0 1px;}

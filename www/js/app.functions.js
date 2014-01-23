@@ -177,7 +177,7 @@ function showAlertEdad(usuario_id, page_id){
 
 function parrafo(element){
     element.css("left","0px");
-    element.animate({ "left" : "-230px"}, 6000, function(){
+    element.animate({ "left" : "-240px"}, 6000, function(){
         parrafo(element);
     });
 }
