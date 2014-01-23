@@ -117,6 +117,7 @@
 .nav-enlaces .icon_mapa .ui-icon{background: url("../img/icon_mapa_black.png") no-repeat scroll 0 0 transparent;height: 30px;width: 34px;background-size: 34px;margin-left: -17px;margin-top: 5px;}
 .nav-enlaces .icon_web .ui-icon{background: url("../img/icon_web_black.png") no-repeat scroll 0 0 transparent;height: 35px;width: 30px;background-size: 29px;margin-left: -13px;margin-top: 1px;}
 .nav-enlaces .icon_promo .ui-icon{background: url("../img/icon_promo_black.png") no-repeat scroll 0 0 transparent;height: 34px;width: 32px;background-size: 32px;margin-left: -17px;margin-top: 3px;}
+.nav-enlaces .icon_promo .numero{position: relative;top: -34px;color: #fff;margin-left: -16px;height: 18px;text-align: center;background: url("../img/bg_item.png") no-repeat scroll center top transparent;background-size: 15px 18px;width: 17px;display: inline-block;padding-top: 1px;}
 
 /* CARROUSEL*/
 .m-carousel-photos .m-item .container-top{border: 7px solid #000; border-bottom: 0px; display: block;margin: 1px 1px 0 1px;}
@@ -139,7 +140,7 @@
 #index .ui-content{margin-top: 115px;display: none;}
 #index .texto {color: #000;text-shadow: 0 0 0;text-align: center;border-bottom: 1px solid #e3e3e3;font-size: 20px;padding: 15px 20px;letter-spacing: -1px;font-family:'caviar_dreamsregular';line-height: 23px;}
 #index .content_options{padding: 0px;width: 43%;float: right;margin-right: -4px;}
-#index .ui-footer p{font-family:'arizoniaregular';color: #e91393;font-size: 33px;letter-spacing: -1px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;text-align: center;margin: 2px 0px;}
+#index .ui-footer p{font-family:'arizoniaregular';color: #e91393;font-size: 33px;letter-spacing: -1px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;text-align: center;margin: 2px 0px;position: relative;width: 145%;}
 
 /* HOME */
 #home .ui-listview li{padding: 40px 50px;margin-top: 1px;border-top: 8px solid #000;border-bottom: 8px solid #000;}
@@ -147,9 +148,8 @@
 #home .ui-btn-submit.ui-btn-pink .ui-btn-text{padding: 0.1em 0 0.1em 0;}
 
 /* ESCORTS - PROMOS - AGENCIAS -  CERCA DE TI */
-#escorts .m-carousel-controls, #promos .m-carousel-controls, #agencias .m-carousel-controls, #cerca_de_ti .m-carousel-controls{bottom: 2px;}
+#escorts .m-carousel-photos .m-item, #promos .m-carousel-photos .m-item, #agencias .m-carousel-photos .m-item, #cerca_de_ti .m-carousel-photos .m-item{box-shadow: 1px 4px 3px #575757;}
 #escorts .m-carousel-bulleted a, #promos .m-carousel-bulleted a, #agencias .m-carousel-bulleted a, #cerca_de_ti .m-carousel-bulleted a{margin: 2px !important;padding: 6px !important;}
-#escorts .m-carousel-photos .carrousel_shadow, #promos .m-carousel-photos .carrousel_shadow, #agencias .m-carousel-photos .carrousel_shadow, #cerca_de_ti .m-carousel-photos .carrousel_shadow{top: -22px;}
 #promos .m-carousel-photos .m-item .container-bottom h2 a, #agencias .m-carousel-photos .m-item .container-bottom h2 a, #cerca_de_ti .m-carousel-photos .m-item .container-bottom h2 a{font-size: 25px;}
 #agencias .m-carousel-photos .m-item .container-bottom p.km{line-height: 38px;}
 
@@ -196,16 +196,12 @@
 @media only screen and  (max-width: 479px) {
 }
 
-@media only screen and (min-width: 480px) and (max-width: 768px) {   
-    .m-carousel-photos .m-item > img{
-        max-height: 598px;
-        min-height: 598px;
-    }
+@media only screen and (min-width: 480px) and (max-width: 768px) {
     #google_map .ui-content{ 
         height: 83%; 
     }
     #escort_descripcion .content_middle .top{
-        margin: auto 122px;
+        margin: auto 115px;
     }    
     #setting .content_options a,
     #participar .content_options a{border-bottom: 8px solid #000;}
@@ -217,4 +213,38 @@
 @media only screen
 and (min-width : 768px)
 and (max-width : 1024px) {
+}
+
+/* PORTRAIT IPHONE 4/4s */
+
+@media only screen
+and (max-width: 479px) 
+and (min-width: 320px) 
+and (max-width: 480px) 
+and (-webkit-device-pixel-ratio: 2) 
+and (orientation:portrait)
+{
+    #setting .ui-content, #participar .ui-content{
+        min-height: 295px;
+    }
+    #setting p, #participar p{
+        padding: 30px 8px 25px;
+    }
+}
+
+/* PORTRAIT IPHONE 5 */
+
+@media only screen 
+and (min-height : 568px)
+and (min-width: 320px) 
+and (max-width: 568px) 
+and (-webkit-device-pixel-ratio: 2)
+and (orientation:portrait) 
+{
+    #setting .ui-content, #participar .ui-content{
+        min-height: 325px;
+    }
+    #setting p, #participar p{
+       padding: 45px 8px 40px;
+    }  
 }

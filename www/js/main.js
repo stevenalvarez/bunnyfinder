@@ -33,6 +33,9 @@ $(document).bind('pageshow', function(event, ui) {
     if(page_id == "index"){
         
         var parent = $("#"+page_id);
+        var p = parent.find(".ui-footer p");
+        parrafo(p);
+                
         if(isLogin()){
             var user = COOKIE;
             var adulto = user.adulto;
@@ -348,6 +351,7 @@ function getEscortById(parent_id, escort_id){
             }
             
             //promo
+            parent.find(".promo .ui-btn-inner").append("<span class='numero'>"+promo.length+"</span>");
             if(promo.length > 0){
                 //siempre sacamos el primero por mas que haiga mil
                 var promo_id = promo[0]['id'];
@@ -696,6 +700,7 @@ function getAgenciaById(parent_id, agencia_id){
             }
             
             //promo
+            parent.find(".promo .ui-btn-inner").append("<span class='numero'>"+promo.length+"</span>");
             if(promo.length > 0){
                 //siempre sacamos el primero por mas que haiga mil
                 var promo_id = promo[0]['id'];

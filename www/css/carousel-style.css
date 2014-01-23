@@ -3,10 +3,9 @@
 */
 
 .m-carousel-controls {
-    position: absolute;
     text-align: center;
-    width: 93.5%;
-    bottom: 5px;
+    width: 100%;
+    margin-top: 5px;
 }
 
 .m-carousel-controls a {
@@ -273,14 +272,6 @@
     display: block;
 }
 
-.m-carousel-photos .carrousel_shadow{
-    position: relative;
-    top: -25px;
-}
-.m-carousel-photos .carrousel_shadow img{
-    width: 100%;
-}
-
 .m-carousel-photos .m-caption {
     background: rgba(0,0,0,0.7);
     bottom: 0;
@@ -324,12 +315,73 @@
     rgba(0,0,0,1) 5%, rgba(0,0,0,1) 95%, rgba(0,0,0,0) 100%);
 }
 
+/* PORTRAIT IPHONE 4/4s */
+
+@media only screen
+and (max-width: 479px) 
+and (min-width: 320px) 
+and (max-width: 480px) 
+and (-webkit-device-pixel-ratio: 2) 
+and (orientation:portrait)
+{
+    .m-carousel-photos .m-item .container-top > img{
+        min-height: 263px; 
+        max-height: 263px;
+    }
+}
+
+/* LANDSCAPE IPHONE 4/4s */
+
+@media only screen 
+and (min-width: 320px)  
+and (max-width: 480px) 
+and (-webkit-device-pixel-ratio: 2)  
+and (orientation:landscape)
+{
+    .m-carousel-photos .m-item .container-top > img {
+        min-height: 375px;
+        max-height: 375px;
+    }
+}
+
+/* PORTRAIT IPHONE 5 */
+
+@media only screen 
+and (min-height : 568px)
+and (min-width: 320px) 
+and (max-width: 568px) 
+and (-webkit-device-pixel-ratio: 2)
+and (orientation:portrait) 
+{
+    .m-carousel-photos .m-item .container-top > img{
+        min-height: 345px; 
+        max-height: 345px;
+    }    
+}
+
+/* LANDSCAPE IPHONE 5 */
+
+@media only screen 
+and (min-width: 568px) 
+and (max-width: 767px)
+and (-webkit-device-pixel-ratio: 2) 
+and (orientation:landscape)
+{
+    .m-carousel-photos .m-item .container-top > img {
+        min-height: 455px;
+        max-height: 455px;
+    }    
+}
+
+/* LANDSCAPE IPHONE 4/4s y 5 */
+@media only screen and (min-width: 480px) and (max-width: 768px) {
+    .m-carousel-photos .m-item > img{
+        max-height: 598px;
+        min-height: 598px;
+    }     
+}
+
 /* LANDSCAPE */
 @media only screen and (min-width: 480px) and (max-width: 768px) {
-    .m-carousel-photos.list .m-carousel-controls{
-        bottom: 15px !important;
-    }
-    .m-carousel-photos.list .carrousel_shadow{
-        top: -40px !important;
-    }
+    
 }

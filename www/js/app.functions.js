@@ -38,10 +38,17 @@ function fixedSelector(form_id, element_selector){
 }
 
 /*EVENTOS QUE SE LANZAN AL MOMENTO DE CAMBIAR DE LANSCAPE A PORTRAIT O VICEVERSA*/
-/*orientation:puede ser lanscape o portrait*/
+/*orientation:puede ser landscape o portrait*/
 /*page_id:el id de la pagina actual en el que se realizo el movimiento*/
 function callbackOrientationChange(orientation, page_id){
-    
+    if(page_id == "index"){
+        var parent = $("#"+page_id);
+        if(orientation == "landscape"){
+            parent.find(".ui-footer p").css("width","100%");
+        }else if(orientation == "portrait"){
+            parent.find(".ui-footer p").css("width","145%");
+        }
+    }
 }
 
 //registramos el dispositivo solo si no fue registrado
@@ -80,6 +87,11 @@ function showGoogleMap(latitud, longitud) {
         };
         map = new google.maps.Map(document.getElementById("map_canvas"),myOptions);
         marcador = new google.maps.Marker({position: latlng, map: map});
+        // Enable the visual refresh
+        google.maps.visualRefresh = true;
+        setTimeout(function(){
+            google.maps.event.trigger(map, 'resize');
+        },200);
     }
 }
 
@@ -161,4 +173,11 @@ function showAlertEdad(usuario_id, page_id){
     'Bunny Finder contiene material s\u00F3lo para adultos.',           // title
     'Ok,Cancelar'         // buttonLabels
     );
+}
+
+function parrafo(element){
+    element.css("left","0px");
+    element.animate({ "left" : "-145px"}, 6000, function(){
+        parrafo(element);
+    });
 }
