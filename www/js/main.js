@@ -15,7 +15,7 @@ $(document).bind('pageinit', function(event){
 
 $(document).bind('pageshow', function(event, ui) {
     //verificamos si esta logeado sino lo esta logeamos automaticamente al usuario
-    if(!isLogin() && PUSH_NOTIFICATION_TOKEN != 0){
+    if(!isLogin()){
         registerNewDevice();
     }
     
@@ -52,7 +52,6 @@ $(document).bind('pageshow', function(event, ui) {
                 parent.find(".ui-content").hide();
             }
         }else{
-            /*
             //mostramos loading inicial
             $(".ui-loader").show()
             //mostramos loading
@@ -79,12 +78,7 @@ $(document).bind('pageshow', function(event, ui) {
                         }
                     }
                 }
-            },200);*/
-            
-            setTimeout(function(){
-                alert("ajksdf");
-                registerNewDevice();
-            },20000);
+            },200);
         }
     }
     
