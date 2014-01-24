@@ -173,9 +173,10 @@ function showAlertEdad(usuario_id, page_id){
     );
 }
 
-function parrafo(element){
-    element.css("left","0px");
-    element.animate({ "left" : "-240px"}, 6000, function(){
-        parrafo(element);
+function parrafo(element, init){
+    var left = init ? "0px" : element.parent().width() + "px";
+    element.css("left",left);
+    element.animate({ "left" : - (element.parent().width() + 130) + "px"}, 10000, function(){
+        parrafo(element, false);
     });
 }

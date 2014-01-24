@@ -34,7 +34,7 @@ $(document).bind('pageshow', function(event, ui) {
         
         var parent = $("#"+page_id);
         var p = parent.find(".ui-footer p");
-        parrafo(p);
+        parrafo(p,true);
                 
         if(isLogin()){
             var user = COOKIE;
