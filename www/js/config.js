@@ -1,7 +1,7 @@
 /************************************ VARIABLES DE CONFIGURACION *******************************************************/
 
 /************************************ server *******************************************************/
-var BASE_URL_APP = "http://www.terrazas.arrobacreativa.com/";
+var BASE_URL_APP = "http://bunnyfinder.es/";
 
 /************************************ localhost *******************************************************/
 //var BASE_URL_APP = "http://localhost/bunnyfinder/web/";
