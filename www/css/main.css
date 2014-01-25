@@ -192,8 +192,9 @@ p.empty{color: #df086f;font-size: 13px;text-shadow: none;padding: 10px;}
 #agencia_descripcion .ui-header .page h2, #promo_descripcion .ui-header .page h2{left: 0;font-size: 17px;}
 
 /* SETTING Y PARTICIPAR */
-#setting .ui-content, #participar .ui-content{background: url("../img/bg_content.jpg") no-repeat;background-size: 100%; margin: 25px 15px 25px 15px;border: 7px solid #000;padding: 0;min-height: 325px;box-shadow: 1px 4px 3px #575757;}
+#setting .ui-content, #participar .ui-content{background: url("../img/bg_content.jpg") no-repeat;background-size: 100%; margin: 25px 15px 25px 15px;border: 7px solid #000;padding: 0;min-height: 325px;box-shadow: 1px 4px 3px #575757;position: relative;}
 #setting .content_details, #participar .content_details{margin: 0px;}
+#setting .content_options, #participar .content_options{position: absolute; width: 100%; bottom: 0px;}
 #setting .content_options a, #participar .content_options a{margin: 0px;border-top: 7px solid #000;border-left: 0;border-right: 0;border-bottom: 0;}
 #setting p, #participar p{color: #fff;font-size: 19px;text-shadow: none;padding: 45px 8px 40px;font-family:'caviar_dreamsbold';text-align: center;}
 
