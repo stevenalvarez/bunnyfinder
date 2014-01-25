@@ -29,11 +29,22 @@
     font-weight: normal;
     font-style: normal;
 }
+@font-face {
+    font-family: 'comic_sans_msregular';
+    src: url('fonts/comic_sans_ms-webfont.eot');
+    src: url('fonts/comic_sans_ms-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/comic_sans_ms-webfont.woff') format('woff'),
+         url('fonts/comic_sans_ms-webfont.ttf') format('truetype'),
+         url('fonts/comic_sans_ms-webfont.svg#comic_sans_msregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
 
 /* GENERAL */
 
 .left{float: left;}
 .right{float: right;}
+p.empty{color: #df086f;font-size: 13px;text-shadow: none;padding: 10px;}
 
 .ui-loader .ui-icon{background-color: transparent;}
 .ui-loader-verbose{box-shadow: 0 0 0; border-radius: 5px !important;}
@@ -72,8 +83,8 @@
 .ui-btn-submit.ui-btn-pink .ui-icon{background: none;box-shadow: none;}
 .ui-btn-submit.ui-btn-pink .ui-btn-text{font-size: 19px;font-family:'caviar_dreamsregular';font-weight: normal;}
 
-.logo.ui-title{margin: .0em 13% .0em;white-space: normal;}
-.logo.ui-title img{width: 100%;height: auto;}
+.logo.ui-title{margin: .0em 13% .0em;white-space: normal;height: 56px;}
+.logo.ui-title img{width: 234px;height: auto;position: absolute; left: 15%;}
 .ui-popup .ui-btn-corner-all{border-radius: 1em;}
 
 /* NAVIGATION HEADER */
@@ -123,7 +134,7 @@
 
 /* CARROUSEL*/
 .m-carousel-photos .m-item .container-top{border: 7px solid #000; border-bottom: 0px; display: block;margin: 1px 1px 0 1px;}
-.m-carousel-photos .m-item .container-top > img{width: 100%;display: block;min-height: 320px; max-height: 320px;}
+.m-carousel-photos .m-item .container-top a > img{width: 100%;display: block;min-height: 320px; max-height: 320px;}
 .m-carousel-photos .m-item .container-bottom{border: 7px solid #000;overflow: hidden;margin: 0 1px;background: #e3007a;padding: 3px 5px;}
 .m-carousel-photos .m-item .container-bottom h2 {margin: 5px;text-overflow: ellipsis;white-space: nowrap;overflow: hidden;}
 .m-carousel-photos .m-item .container-bottom h2 a{text-shadow: none;color: #fff;font-family: caviar_dreamsbold;font-size: 28px;}
@@ -139,10 +150,10 @@
 /* INDEX */
 #index.ui-page{background: url("../img/bg_wrapper.jpg") no-repeat scroll 0 0 transparent;}
 #index.ui-page{background-size: 100% auto;background-position: 0px 45px;}
-#index .ui-content{margin-top: 115px;display: none;}
+#index .ui-content{margin-top: 126px;display: none;}
 #index .texto {color: #000;text-shadow: 0 0 0;text-align: center;border-bottom: 1px solid #e3e3e3;font-size: 20px;padding: 15px 20px;letter-spacing: -1px;font-family:'caviar_dreamsregular';line-height: 23px;}
 #index .content_options{padding: 0px;width: 43%;float: right;margin-right: -4px;}
-#index .ui-footer p{font-family:'arizoniaregular';color: #e91393;font-size: 33px;letter-spacing: -1px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;text-align: left;margin: 2px 0px;position: relative;width: 180%;}
+#index .ui-footer p{font-family:'comic_sans_msregular';color: #e91393;font-size: 27px;letter-spacing: -1px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;text-align: left;margin: 2px 0px;position: relative;width: 180%;}
 
 /* HOME */
 #home .ui-listview li{padding: 40px 50px;margin-top: 1px;border-top: 8px solid #000;border-bottom: 8px solid #000;}
@@ -153,7 +164,7 @@
 #escorts .m-carousel-photos .m-item, #promos .m-carousel-photos .m-item, #agencias .m-carousel-photos .m-item, #cerca_de_ti .m-carousel-photos .m-item{box-shadow: 1px 4px 3px #575757;}
 #escorts .m-carousel-bulleted a, #promos .m-carousel-bulleted a, #agencias .m-carousel-bulleted a, #cerca_de_ti .m-carousel-bulleted a{margin: 2px !important;padding: 6px !important;}
 #promos .m-carousel-photos .m-item .container-bottom h2 a, #agencias .m-carousel-photos .m-item .container-bottom h2 a, #cerca_de_ti .m-carousel-photos .m-item .container-bottom h2 a{font-size: 25px;}
-#agencias .m-carousel-photos .m-item .container-bottom p.km{line-height: 38px;}
+#agencias .m-carousel-photos .m-item .container-bottom p.km, .m-carousel-photos .m-item .container-bottom p.km.agencia{line-height: 38px;}
 
 /* ESCORT DESCRIPCION - AGENCIA DESCRIPCION - PROMO DESCRIPCION */
 #escort_descripcion .ui-content, #agencia_descripcion .ui-content, #promo_descripcion .ui-content{margin: 0px;min-height: 415px;border-radius: 0;border: none;}
@@ -207,6 +218,7 @@
     }    
     #setting .content_options a,
     #participar .content_options a{border-bottom: 8px solid #000;}
+    .logo.ui-title img{left: 26%;}
 }
 
 /* Tablet (Portrait)

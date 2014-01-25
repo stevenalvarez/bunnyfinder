@@ -250,7 +250,9 @@ function getEscorts(parent_id, categoria_id){
                	    if(index == 0) mclass = "m-active";
                     var html='<div class="m-item '+mclass+'">' +
                         '<div class="container-top">' +
-                            '<img src="'+BASE_URL_APP+'img/escorts/thumbnails/' + imagen + '"/>' +
+                            '<a href="escort_descripcion.html?id='+item.Escort.id+'">' +
+                                '<img src="'+BASE_URL_APP+'img/escorts/thumbnails/' + imagen + '"/>' +
+                            '</a>' +
                         '</div>' +
                         '<div class="container-bottom">' +
                             '<div class="left">' +
@@ -289,6 +291,7 @@ function getEscorts(parent_id, categoria_id){
                     });
                 });
             }else{
+                container.append("<li><p class='empty'>TODAV&Iacute;A NO TENEMOS A NADIE EN ESTA SECCI&Oacute;N. DENTRO DE POCO A&Nacute;ADIREMOS PERFILES.</p></li>");
                 //ocultamos loading
                 $.mobile.loading( 'hide' );
                 $(".ui-loader").hide();
@@ -407,16 +410,22 @@ function getEscortsByDistance(parent_id){
             //mostramos loading
             $.mobile.loading( 'show' );
             
-    		items = data.items;
-            if(items.length){
-        		$.each(items, function(index, item) {
+    	    var escorts = data.escorts;
+            var agencias = data.agencias;
+            if(escorts.length || agencias.length){
+                var contador = 0
+                
+                //Escorts
+        		$.each(escorts, function(index, item) {
                     
                	    var imagen = item.Escort.imagen!=""?item.Escort.imagen:"default.png";
                	    var mclass = ""; 
-               	    if(index == 0) mclass = "m-active";
+               	    if(contador == 0) mclass = "m-active";
                     var html='<div class="m-item '+mclass+'">' +
                         '<div class="container-top">' +
-                            '<img src="'+BASE_URL_APP+'img/escorts/thumbnails/' + imagen + '"/>' +
+                            '<a href="escort_descripcion.html?id='+item.Escort.id+'">' +
+                                '<img src="'+BASE_URL_APP+'img/escorts/thumbnails/' + imagen + '"/>' +
+                            '</a>' +
                         '</div>' +
                         '<div class="container-bottom">' +
                             '<div class="left">' +
@@ -439,8 +448,45 @@ function getEscortsByDistance(parent_id){
                     '</div>';
                     
                	    container.find(".m-carousel-inner").append(html);
-                    container.find(".m-carousel-controls").append('<a href="#" data-slide="'+(index+1)+'">'+(index+1)+'</a>');
+                    container.find(".m-carousel-controls").append('<a href="#" data-slide="'+(contador+1)+'">'+(contador+1)+'</a>');
+                    contador++;
         		});
+                
+                //Agencias
+        		$.each(agencias, function(index, item) {
+                    
+               	    var imagen = item.Agencia.imagen!=""?item.Agencia.imagen:"default.png";
+               	    var mclass = ""; 
+               	    if(contador == 0) mclass = "m-active";
+                    var html='<div class="m-item '+mclass+'">' +
+                        '<div class="container-top">' +
+                            '<a href="agencia_descripcion.html?id='+item.Agencia.id+'">' +
+                                '<img src="'+BASE_URL_APP+'img/agencias/thumbnails/' + imagen + '"/>' +
+                            '</a>' +
+                        '</div>' +
+                        '<div class="container-bottom">' +
+                            '<div class="left">' +
+                                '<h2>' +
+                                    '<a href="agencia_descripcion.html?id='+item.Agencia.id+'">'+item.Agencia.title+'</a>' +
+                                '</h2>' +
+                            '</div>' +
+                            '<div class="right">' +
+                                '<p class="km agencia">';
+                                //si esta menos de 1km le mostramos la distancia en metros en la cual se encuentra
+                                if(parseInt(item.Agencia.kilomentros) < 1){
+                                    html+=parseFloat(item.Agencia.metros).toFixed(2)+'M';
+                                }else{
+                                    html+=parseFloat(item.Agencia.kilomentros).toFixed(2)+'KM';
+                                }                                
+                                html+='</p>' +
+                            '</div>' +
+                        '</div>' +
+                    '</div>';
+                    
+               	    container.find(".m-carousel-inner").append(html);
+                    container.find(".m-carousel-controls").append('<a href="#" data-slide="'+(contador+1)+'">'+(contador+1)+'</a>');
+                    contador++;
+        		});                
                 
                 //iniciamos el carousel
                 container.find(".m-carousel-inner").promise().done(function() {
@@ -491,7 +537,9 @@ function getPromos(parent_id, zona_id){
                	    if(index == 0) mclass = "m-active";
                     var html='<div class="m-item '+mclass+'">' +
                         '<div class="container-top">' +
-                            '<img src="'+BASE_URL_APP+'img/promos/thumbnails/' + imagen + '"/>' +
+                            '<a href="promo_descripcion.html?id='+item.id+'">' +
+                                '<img src="'+BASE_URL_APP+'img/promos/thumbnails/' + imagen + '"/>' +
+                            '</a>' +
                         '</div>' +
                         '<div class="container-bottom">' +
                             '<h2>' +
@@ -517,6 +565,7 @@ function getPromos(parent_id, zona_id){
                     });
                 });
             }else{
+                container.append("<li><p class='empty'>TODAV&Iacute;A NO HAY PROMOS. DENTRO DE POCO A&Nacute;ADIREMOS PROMOS.</p></li>");
                 //ocultamos loading
                 $.mobile.loading( 'hide' );
                 $(".ui-loader").hide();
@@ -620,7 +669,9 @@ function getAgencias(parent_id, zona_id){
                	    if(index == 0) mclass = "m-active";
                     var html='<div class="m-item '+mclass+'">' +
                         '<div class="container-top">' +
-                            '<img src="'+BASE_URL_APP+'img/agencias/thumbnails/' + imagen + '"/>' +
+                            '<a href="agencia_descripcion.html?id='+item.Agencia.id+'">' +
+                                '<img src="'+BASE_URL_APP+'img/agencias/thumbnails/' + imagen + '"/>' +
+                            '</a>' +
                         '</div>' +
                         '<div class="container-bottom">' +
                             '<div class="left">' +
@@ -658,6 +709,7 @@ function getAgencias(parent_id, zona_id){
                     });
                 });
             }else{
+                container.append("<li><p class='empty'>TODAV&Iacute;A NO HAY AGENCIAS. DENTRO DE POCO A&Nacute;ADIREMOS AGENCIAS.</p></li>");
                 //ocultamos loading
                 $.mobile.loading( 'hide' );
                 $(".ui-loader").hide();
