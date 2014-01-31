@@ -251,7 +251,7 @@ function getEscorts(parent_id, categoria_id){
                     var html='<div class="m-item '+mclass+'">' +
                         '<div class="container-top">' +
                             '<a href="escort_descripcion.html?id='+item.Escort.id+'">' +
-                                '<img src="'+BASE_URL_APP+'img/escorts/thumbnails/' + imagen + '"/>' +
+                                '<img src="'+BASE_URL_APP+'img/escorts/' + imagen + '"/>' +
                             '</a>' +
                         '</div>' +
                         '<div class="container-bottom">' +
@@ -269,7 +269,7 @@ function getEscorts(parent_id, categoria_id){
                                     html+=parseFloat(item.Escort.kilomentros).toFixed(2)+'KM';
                                 }                                
                                 html+='</p>' +
-                                '<p class="euro">'+item.Escort.precio+'<b>&euro;</b></p>' +
+                                '<p class="euro">'+item.Escort.precio+'</p>' +
                             '</div>' +
                         '</div>' +
                     '</div>';
@@ -424,7 +424,7 @@ function getEscortsByDistance(parent_id){
                     var html='<div class="m-item '+mclass+'">' +
                         '<div class="container-top">' +
                             '<a href="escort_descripcion.html?id='+item.Escort.id+'">' +
-                                '<img src="'+BASE_URL_APP+'img/escorts/thumbnails/' + imagen + '"/>' +
+                                '<img src="'+BASE_URL_APP+'img/escorts/' + imagen + '"/>' +
                             '</a>' +
                         '</div>' +
                         '<div class="container-bottom">' +
@@ -442,7 +442,7 @@ function getEscortsByDistance(parent_id){
                                     html+=parseFloat(item.Escort.kilomentros).toFixed(2)+'KM';
                                 }                                
                                 html+='</p>' +
-                                '<p class="euro">'+item.Escort.precio+'<b>&euro;</b></p>' +
+                                '<p class="euro">'+item.Escort.precio+'</p>' +
                             '</div>' +
                         '</div>' +
                     '</div>';
@@ -461,7 +461,7 @@ function getEscortsByDistance(parent_id){
                     var html='<div class="m-item '+mclass+'">' +
                         '<div class="container-top">' +
                             '<a href="agencia_descripcion.html?id='+item.Agencia.id+'">' +
-                                '<img src="'+BASE_URL_APP+'img/agencias/thumbnails/' + imagen + '"/>' +
+                                '<img src="'+BASE_URL_APP+'img/agencias/' + imagen + '"/>' +
                             '</a>' +
                         '</div>' +
                         '<div class="container-bottom">' +
@@ -538,7 +538,7 @@ function getPromos(parent_id, zona_id){
                     var html='<div class="m-item '+mclass+'">' +
                         '<div class="container-top">' +
                             '<a href="promo_descripcion.html?id='+item.id+'">' +
-                                '<img src="'+BASE_URL_APP+'img/promos/thumbnails/' + imagen + '"/>' +
+                                '<img src="'+BASE_URL_APP+'img/promos/' + imagen + '"/>' +
                             '</a>' +
                         '</div>' +
                         '<div class="container-bottom">' +
@@ -670,7 +670,7 @@ function getAgencias(parent_id, zona_id){
                     var html='<div class="m-item '+mclass+'">' +
                         '<div class="container-top">' +
                             '<a href="agencia_descripcion.html?id='+item.Agencia.id+'">' +
-                                '<img src="'+BASE_URL_APP+'img/agencias/thumbnails/' + imagen + '"/>' +
+                                '<img src="'+BASE_URL_APP+'img/agencias/' + imagen + '"/>' +
                             '</a>' +
                         '</div>' +
                         '<div class="container-bottom">' +

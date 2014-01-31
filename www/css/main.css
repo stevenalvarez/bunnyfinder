@@ -88,9 +88,10 @@ p.empty{color: #df086f;font-size: 13px;text-shadow: none;padding: 10px;}
 .ui-popup .ui-btn-corner-all{border-radius: 1em;}
 
 /* NAVIGATION HEADER */
-.ui-header ul{padding: 0 0px 0 10px;height: 58px;background: url("../img/bg_top_header.jpg") repeat-x scroll bottom left #000;}
+.ui-header{height: 49px;box-shadow: 0px 8px 8px #333;}
+.ui-header ul{padding: 0 0px 0 10px;}
 .ui-header ul li{float: left;}
-.ui-header a{border-radius: 0 0 0 0;margin-top: 18px;margin-bottom: 8px;-moz-box-shadow: 0px 0px 0px rgba(0,0,0,.2);-webkit-box-shadow: 0px 0px 0px rgba(0,0,0,.2)}
+.ui-header a{border-radius: 0 0 0 0;margin-top: 12px;margin-bottom: 8px;-moz-box-shadow: 0px 0px 0px rgba(0,0,0,.2);-webkit-box-shadow: 0px 0px 0px rgba(0,0,0,.2)}
 .ui-header .back{width: 21%;}
 .ui-header .volver{background: url("../img/bg_volver.png") no-repeat scroll center top transparent;border: 0;background-size: 63px;box-shadow: none;}
 .ui-header .volver .ui-btn-inner{border: 0;}
@@ -98,11 +99,11 @@ p.empty{color: #df086f;font-size: 13px;text-shadow: none;padding: 10px;}
 .ui-header .page img{width: 158px;}
 .ui-header .page h2{line-height: 37px;font-size: 34px;font-family: caviar_dreamsbold;margin: 2px 0;left: -6px;position: relative;color: #ed0b8f;text-overflow: ellipsis;white-space: nowrap;overflow: hidden;}
 .ui-header .alerta{width: 17%;background: #919091;float: right;}
-.ui-header .alerta a{background: url("../img/bg_setting.png") no-repeat scroll center top transparent;height: 24px;border: 0;background-size: 25px;box-shadow: none;width: 100%;margin: 16px 0 15px;}
+.ui-header .alerta a{background: url("../img/bg_setting.png") no-repeat scroll center top transparent;height: 24px;border: 0;background-size: 25px;box-shadow: none;width: 100%;margin: 12px 0 13px}
 .ui-header .alerta .ui-btn-inner{border: none;}
 
 /* NAVIGATION FOOTER */
-.ui-footer{background: #000;}
+.ui-footer{background: #000;box-shadow: 0px -3px 8px #666;}
 .ui-footer .ui-navbar li .ui-btn-icon-top .ui-btn-inner{padding-top: 48px;min-height: 12px;margin-bottom: 0px;padding-bottom: 2px;}
 .nav-custom .ui-btn{background-image: none !important;border: none !important;font-family:'caviar_dreamsregular';font-weight: normal !important;text-shadow: none !important;line-height: 8px !important;background: #000 !important;}
 .nav-custom .ui-btn .ui-btn-inner {border-top: none;}
@@ -140,7 +141,9 @@ p.empty{color: #df086f;font-size: 13px;text-shadow: none;padding: 10px;}
 .m-carousel-photos .m-item .container-bottom h2 a{text-shadow: none;color: #fff;font-family: caviar_dreamsbold;font-size: 28px;}
 .m-carousel-photos .m-item .container-bottom p{text-shadow: none;font-size: 19px;line-height: 19px;text-align: right;font-family: 'caviar_dreamsregular';}
 .m-carousel-photos .m-item .container-bottom p.km{background: url("../img/bg_distance.png") no-repeat scroll center left transparent;background-size: 12px;padding-left: 14px;}
+.m-carousel-photos .m-item .container-bottom p.euro{letter-spacing: -1px;font-size: 17px;text-overflow: ellipsis;white-space: nowrap;overflow: hidden;}
 .m-carousel-photos .m-item .container-bottom .left{width: 60%;}
+.m-carousel-photos .m-item .container-bottom .right{width: 40%;}
 .m-carousel-photos .m-item .container-bottom .right{padding-top: 5px;}
 
 /* CARROUSEL DESCRIPCION */
@@ -148,12 +151,13 @@ p.empty{color: #df086f;font-size: 13px;text-shadow: none;padding: 10px;}
 .m-carousel-photos .m-item > img{max-height: 337px;min-height: 337px;}
 
 /* INDEX */
+#index .ui-header{height: 57px;box-shadow: none;}
 #index.ui-page{background: url("../img/bg_wrapper.jpg") no-repeat scroll 0 0 transparent;}
 #index.ui-page{background-size: 100% auto;background-position: 0px 45px;}
 #index .ui-content{margin-top: 126px;display: none;}
 #index .texto {color: #000;text-shadow: 0 0 0;text-align: center;border-bottom: 1px solid #e3e3e3;font-size: 20px;padding: 15px 20px;letter-spacing: -1px;font-family:'caviar_dreamsregular';line-height: 23px;}
 #index .content_options{padding: 0px;width: 43%;float: right;margin-right: -4px;}
-#index .ui-footer p{font-family:'comic_sans_msregular';color: #e91393;font-size: 27px;letter-spacing: -1px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;text-align: left;margin: 2px 0px;position: relative;width: 180%;}
+#index .ui-footer p{font-family:'caviar_dreamsbold';color: #e91393;font-size: 27px;letter-spacing: -1px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;text-align: left;margin: 2px 0px;position: relative;width: 180%;}
 
 /* HOME */
 #home .ui-listview li{padding: 40px 50px;margin-top: 1px;border-top: 8px solid #000;border-bottom: 8px solid #000;}
@@ -170,7 +174,8 @@ p.empty{color: #df086f;font-size: 13px;text-shadow: none;padding: 10px;}
 #escort_descripcion .ui-content, #agencia_descripcion .ui-content, #promo_descripcion .ui-content{margin: 0px;min-height: 415px;border-radius: 0;border: none;}
 #escort_descripcion .content_middle, #agencia_descripcion .content_middle{overflow: hidden;text-shadow: none;}
 #escort_descripcion .content_middle .ui-navbar, #agencia_descripcion .content_middle .ui-navbar{border-bottom: 1px solid #fff;}
-#escort_descripcion .content_middle .top, #agencia_descripcion .content_middle .top{overflow: hidden;color: #000;font-size: 30px;font-family: 'caviar_dreamsregular';margin: auto 30px;}
+#escort_descripcion .content_middle .top, #agencia_descripcion .content_middle .top{overflow: hidden;color: #000;font-size: 30px;font-family: 'caviar_dreamsregular';margin: auto 10px;text-align: center;}
+#escort_descripcion .content_middle .top .precio{width: 100%;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;display: block;}
 #escort_descripcion .content_middle .top b, #agencia_descripcion .content_middle .top b{color: #eb058c;}
 #escort_descripcion .content_middle .top .km, #agencia_descripcion .content_middle .top .km{background: url("../img/bg_distance_rosa.png") no-repeat scroll center left transparent;background-size: 15px;padding-left: 17px;} 
 #escort_descripcion .content_middle .bottom, #agencia_descripcion .content_middle .bottom{overflow: hidden;background: #000;text-align: center;padding: 5px 0;}
@@ -213,10 +218,7 @@ p.empty{color: #df086f;font-size: 13px;text-shadow: none;padding: 10px;}
 @media only screen and (min-width: 480px) and (max-width: 768px) {
     #google_map .ui-content{ 
         height: 83%; 
-    }
-    #escort_descripcion .content_middle .top{
-        margin: auto 115px;
-    }    
+    }  
     #setting .content_options a,
     #participar .content_options a{border-bottom: 8px solid #000;}
     .logo.ui-title img{left: 26%;}
