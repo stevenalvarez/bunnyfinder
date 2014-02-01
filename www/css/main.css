@@ -39,6 +39,16 @@
     font-weight: normal;
     font-style: normal;
 }
+@font-face {
+    font-family: 'bira_personal_use_onlyregular';
+    src: url('fonts/bira_personal_use_only-webfont.eot');
+    src: url('fonts/bira_personal_use_only-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/bira_personal_use_only-webfont.woff') format('woff'),
+         url('fonts/bira_personal_use_only-webfont.ttf') format('truetype'),
+         url('fonts/bira_personal_use_only-webfont.svg#bira_personal_use_onlyregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
 
 /* GENERAL */
 
@@ -83,8 +93,8 @@ p.empty{color: #df086f;font-size: 13px;text-shadow: none;padding: 10px;}
 .ui-btn-submit.ui-btn-pink .ui-icon{background: none;box-shadow: none;}
 .ui-btn-submit.ui-btn-pink .ui-btn-text{font-size: 19px;font-family:'caviar_dreamsregular';font-weight: normal;}
 
-.logo.ui-title{margin: .0em 13% .0em;white-space: normal;height: 56px;}
-.logo.ui-title img{width: 234px;height: auto;position: absolute; left: 15%;}
+.logo.ui-title{margin: .0em 7% .0em;white-space: normal;height: 56px;}
+.logo.ui-title img{width: 257px;height: auto;position: absolute; left: 12%;margin-top: 4px;}
 .ui-popup .ui-btn-corner-all{border-radius: 1em;}
 
 /* NAVIGATION HEADER */
@@ -151,13 +161,13 @@ p.empty{color: #df086f;font-size: 13px;text-shadow: none;padding: 10px;}
 .m-carousel-photos .m-item > img{max-height: 337px;min-height: 337px;}
 
 /* INDEX */
-#index .ui-header{height: 57px;box-shadow: none;}
+#index .ui-header{height: 57px;}
 #index.ui-page{background: url("../img/bg_wrapper.jpg") no-repeat scroll 0 0 transparent;}
 #index.ui-page{background-size: 100% auto;background-position: 0px 45px;}
 #index .ui-content{margin-top: 126px;display: none;}
 #index .texto {color: #000;text-shadow: 0 0 0;text-align: center;border-bottom: 1px solid #e3e3e3;font-size: 20px;padding: 15px 20px;letter-spacing: -1px;font-family:'caviar_dreamsregular';line-height: 23px;}
 #index .content_options{padding: 0px;width: 43%;float: right;margin-right: -4px;}
-#index .ui-footer p{font-family:'caviar_dreamsbold';color: #e91393;font-size: 27px;letter-spacing: -1px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;text-align: left;margin: 2px 0px;position: relative;width: 180%;}
+#index .ui-footer p{font-family:'bira_personal_use_onlyregular';color: #e91393;font-size: 27px;letter-spacing: -1px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;text-align: left;margin: 2px 0px;position: relative;width: 180%;}
 
 /* HOME */
 #home .ui-listview li{padding: 40px 50px;margin-top: 1px;border-top: 8px solid #000;border-bottom: 8px solid #000;}
@@ -174,8 +184,9 @@ p.empty{color: #df086f;font-size: 13px;text-shadow: none;padding: 10px;}
 #escort_descripcion .ui-content, #agencia_descripcion .ui-content, #promo_descripcion .ui-content{margin: 0px;min-height: 415px;border-radius: 0;border: none;}
 #escort_descripcion .content_middle, #agencia_descripcion .content_middle{overflow: hidden;text-shadow: none;}
 #escort_descripcion .content_middle .ui-navbar, #agencia_descripcion .content_middle .ui-navbar{border-bottom: 1px solid #fff;}
-#escort_descripcion .content_middle .top, #agencia_descripcion .content_middle .top{overflow: hidden;color: #000;font-size: 30px;font-family: 'caviar_dreamsregular';margin: auto 10px;text-align: center;}
-#escort_descripcion .content_middle .top .precio{width: 100%;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;display: block;}
+#escort_descripcion .content_middle .top, #agencia_descripcion .content_middle .top{overflow: hidden;color: #000;font-size: 30px;font-family: 'caviar_dreamsregular';margin: auto 15px; letter-spacing: -1px;}
+#escort_descripcion .content_middle .top .left {width: 42%;}
+#escort_descripcion .content_middle .top .left p{overflow: hidden;white-space: nowrap;}
 #escort_descripcion .content_middle .top b, #agencia_descripcion .content_middle .top b{color: #eb058c;}
 #escort_descripcion .content_middle .top .km, #agencia_descripcion .content_middle .top .km{background: url("../img/bg_distance_rosa.png") no-repeat scroll center left transparent;background-size: 15px;padding-left: 17px;} 
 #escort_descripcion .content_middle .bottom, #agencia_descripcion .content_middle .bottom{overflow: hidden;background: #000;text-align: center;padding: 5px 0;}
@@ -218,7 +229,10 @@ p.empty{color: #df086f;font-size: 13px;text-shadow: none;padding: 10px;}
 @media only screen and (min-width: 480px) and (max-width: 768px) {
     #google_map .ui-content{ 
         height: 83%; 
-    }  
+    }
+    #escort_descripcion .content_middle .top .left{
+        width: 55%;
+    }
     #setting .content_options a,
     #participar .content_options a{border-bottom: 8px solid #000;}
     .logo.ui-title img{left: 26%;}

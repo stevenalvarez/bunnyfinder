@@ -335,10 +335,12 @@ function getEscortById(parent_id, escort_id){
                 container.find(".m-carousel-controls").append('<a href="#" data-slide="'+(index+1)+'">'+(index+1)+'</a>');
             });
             
+            //reemplazamos (euro) con html
+            var precio = (escort.precio).replace("\u20AC","<b>&euro;</b>");
             //llenamos los datos
             parent.find(".page h2").html(escort.title);
             parent.find(".texto_descripcion").html(escort.descripcion);
-            parent.find(".precio").html(escort.precio);
+            parent.find(".precio").html(precio);
             parent.find(".pais").html(pais.nombre);
             parent.find(".edad").html(escort.edad+" a&ntilde;os");
             parent.find(".tono_piel").html(escort.tono_piel);
