@@ -337,6 +337,7 @@ function getEscortById(parent_id, escort_id){
             
             //reemplazamos (euro) con html
             var precio = (escort.precio).replace("\u20AC","<b>&euro;</b>");
+            precio = (precio).replace("\u20AC","<b>&euro;</b>");
             //llenamos los datos
             parent.find(".page h2").html(escort.title);
             parent.find(".texto_descripcion").html(escort.descripcion);
