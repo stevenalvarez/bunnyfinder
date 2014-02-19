@@ -26,7 +26,7 @@
             <div class="content_top">
                 
                 <!-- start the viewport -->
-                <div id="carrousel_promo_descripcion" class="m-carousel m-fluid m-carousel-photos">
+                <div id="carrousel_promo_descripcion" class="m-carousel m-fluid m-carousel-photos interior">
                 
                     <!-- controles -->
                     <div data-role="navbar" class="controles" data-corners="false">
@@ -104,6 +104,16 @@
     
     	<div data-role="footer" data-tap-toggle="false" data-position="fixed">
     	</div><!-- /footer -->
+        
+        <!-- modal zoom foto -->
+        <div data-role="popup" data-theme="c" data-overlay-theme="a">
+            <div data-role="popup" id="zoom_foto" data-theme="c" class="ui-corner-all" data-overlay-theme="a">
+                <a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-right close">Close</a>
+                <div class="content_zoom_image">
+                    <img src="" />
+                </div>
+            </div>
+        </div>
     
     </div><!-- /page -->    
     

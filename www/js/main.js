@@ -329,6 +329,7 @@ function getEscortById(parent_id, escort_id){
            	    if(index == 0) mclass = "m-active";
                 var html='<div class="m-item '+mclass+'">' +
                     '<img src="'+BASE_URL_APP+'img/escorts/' + imagen + '">' +
+                    '<a onclick="zoomPhoto(this)" rel="' + BASE_URL_APP+'img/escorts/' + imagen + '" class="zoom_media" href="#zoom_foto" data-rel="popup" data-position-to="window" data-transition="pop">&nbsp;</a>' +
                 '</div>';
                 
            	    container.find(".m-carousel-inner").append(html);
@@ -605,6 +606,7 @@ function getPromoById(parent_id, promo_id){
            	    if(index == 0) mclass = "m-active";
                 var html='<div class="m-item '+mclass+'">' +
                     '<img src="'+BASE_URL_APP+'img/promos/' + imagen + '">' +
+                    '<a onclick="zoomPhoto(this)" rel="' + BASE_URL_APP+'img/promos/' + imagen + '" class="zoom_media" href="#zoom_foto" data-rel="popup" data-position-to="window" data-transition="pop">&nbsp;</a>' +
                 '</div>';
                 
            	    container.find(".m-carousel-inner").append(html);
@@ -749,6 +751,7 @@ function getAgenciaById(parent_id, agencia_id){
            	    if(index == 0) mclass = "m-active";
                 var html='<div class="m-item '+mclass+'">' +
                     '<img src="'+BASE_URL_APP+'img/agencias/' + imagen + '">' +
+                    '<a onclick="zoomPhoto(this)" rel="' + BASE_URL_APP+'img/agencias/' + imagen + '" class="zoom_media" href="#zoom_foto" data-rel="popup" data-position-to="window" data-transition="pop">&nbsp;</a>' +
                 '</div>';
                 
            	    container.find(".m-carousel-inner").append(html);

@@ -326,7 +326,7 @@ and (orientation:portrait)
 {
     .m-carousel-photos .m-item .container-top a > img{
         min-height: 263px; 
-        max-height: 263px;
+        /*max-height: 263px;*/
     }
 }
 
@@ -339,8 +339,8 @@ and (-webkit-device-pixel-ratio: 2)
 and (orientation:landscape)
 {
     .m-carousel-photos .m-item .container-top a > img {
-        min-height: 375px;
-        max-height: 375px;
+        min-height: 696px;
+        max-height: 696px;
     }
 }
 
@@ -355,7 +355,7 @@ and (orientation:portrait)
 {
     .m-carousel-photos .m-item .container-top a > img{
         min-height: 345px; 
-        max-height: 345px;
+        /*max-height: 345px;*/
     }    
 }
 
@@ -368,16 +368,16 @@ and (-webkit-device-pixel-ratio: 2)
 and (orientation:landscape)
 {
     .m-carousel-photos .m-item .container-top a > img {
-        min-height: 455px;
-        max-height: 455px;
+        min-height: 696px;
+        max-height: 696px;
     }    
 }
 
 /* LANDSCAPE IPHONE 4/4s y 5 */
 @media only screen and (min-width: 480px) and (max-width: 768px) {
     .m-carousel-photos .m-item > img{
-        max-height: 598px;
-        min-height: 598px;
+        max-height: 696px;
+        min-height: 696px;
     }
     .m-carousel-photos .ui-navbar{
         width: 99%;

@@ -144,8 +144,8 @@ p.empty{color: #df086f;font-size: 13px;text-shadow: none;padding: 10px;}
 .nav-enlaces .icon_promo .numero{position: relative;top: -34px;color: #fff;margin-left: -16px;height: 18px;text-align: center;background: url("../img/bg_item.png") no-repeat scroll center top transparent;background-size: 15px 18px;width: 17px;display: inline-block;}
 
 /* CARROUSEL*/
-.m-carousel-photos .m-item .container-top{border: 7px solid #000; border-bottom: 0px; display: block;margin: 1px 1px 0 1px;}
-.m-carousel-photos .m-item .container-top a > img{width: 100%;display: block;min-height: 320px; max-height: 320px;}
+.m-carousel-photos .m-item .container-top{border: 7px solid #000; border-bottom: 0px; display: block;margin: 1px 1px 0 1px;overflow: hidden;}
+.m-carousel-photos .m-item .container-top a > img{width: 100%;display: block;min-height: 320px; /*max-height: 320px;*/}
 .m-carousel-photos .m-item .container-bottom{border: 7px solid #000;overflow: hidden;margin: 0 1px;background: #e3007a;padding: 3px 5px;}
 .m-carousel-photos .m-item .container-bottom h2 {margin: 5px;text-overflow: ellipsis;white-space: nowrap;overflow: hidden;}
 .m-carousel-photos .m-item .container-bottom h2 a{text-shadow: none;color: #fff;font-family: caviar_dreamsbold;font-size: 28px;}
@@ -158,7 +158,8 @@ p.empty{color: #df086f;font-size: 13px;text-shadow: none;padding: 10px;}
 
 /* CARROUSEL DESCRIPCION */
 .m-carousel-bulleted a{margin: 0 2px !important;}
-.m-carousel-photos .m-item > img{max-height: 337px;min-height: 337px;}
+.m-carousel-photos.interior .m-item{overflow: hidden;position: relative;}
+.m-carousel-photos .m-item > img{min-height: 337px;}
 
 /* INDEX */
 #index .ui-header{height: 57px;}
@@ -219,6 +220,10 @@ p.empty{color: #df086f;font-size: 13px;text-shadow: none;padding: 10px;}
 #google_map .ui-content { height: 90%; padding: 0;}
 #google_map #map_canvas { height: 100% }
 
+/* ZOOM */
+a.zoom_media{background: url("../img/zoom_icon.png") no-repeat center center transparent;background-size: 47px;position: absolute;width: 47px;height: 47px;display: block;right: 5px;bottom: 5px;}
+.content_zoom_image img{display: block; width: 100%;}
+
 /* HOME IPAD AND MOBILE*/
 /* #Mobile (Landscape)
 ================================================== */
@@ -262,6 +267,12 @@ and (orientation:portrait)
     #setting p, #participar p{
         padding: 30px 8px 25px;
     }
+    .m-carousel-photos.interior .m-item{
+        height: 345px;
+    }
+    .m-carousel-photos .m-item .container-top{
+        height: 263px;
+    }
 }
 
 /* PORTRAIT IPHONE 5 */
@@ -279,5 +290,11 @@ and (orientation:portrait)
     }
     #setting p, #participar p{
        padding: 45px 8px 40px;
-    }  
+    }
+    .m-carousel-photos.interior .m-item{
+        height: 432px;
+    }
+    .m-carousel-photos .m-item .container-top{
+        height: 354px;
+    }    
 }

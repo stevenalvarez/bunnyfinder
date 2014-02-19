@@ -180,3 +180,8 @@ function parrafo(element, init){
         parrafo(element, false);
     });
 }
+
+/*EFECTO DE ZOOM SOBRE LA FOTO*/
+function zoomPhoto(thiss){
+    jQuery("#zoom_foto").find(".content_zoom_image img").attr("src",jQuery(thiss).attr("rel"));
+}
