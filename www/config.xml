@@ -2,8 +2,8 @@
 <widget xmlns		= "http://www.w3.org/ns/widgets"
 	xmlns:gap	= "http://phonegap.com/ns/1.0"
 	id		    = "com.sysdecom.bunnyfinder"
-    versionCode = "1.0"
-	version 	= "1.0">
+    versionCode = "2.0"
+	version 	= "1.1">
 
 	<name>Bunny Finder</name>
 
